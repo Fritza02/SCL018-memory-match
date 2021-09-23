@@ -1,0 +1,77 @@
+body {
+    background-color: #ffc300;
+    text-align: center;
+}
+.contenedor-index {
+  width: 1300px;/*ancho de un elemento*/
+  height: 690px;/*altura de un elemnto */
+  display: flex;/*Los elementos se distribuyen de izquierda a derecha*/
+  justify-content: center;/* distribuye el espacio entre y alrededor de los items flex*/
+  position:absolute;/*posicionar elementos de manera absoluta*/
+  text-align: center; /*alineacion del texto en el centro*/
+}
+
+.contenedor-titulo h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;/*fuentes del texto*/
+    font-size: 50pt;/*dimension de letras*/
+    color : #581845;
+    text-align: center;
+    margin: 0 ;
+    position: relative;
+  
+}
+:root {
+  --w: calc(70vw / 4);/*ancho */
+  --h: calc(70vh / 3);/*alto */
+}
+
+* {/*para todos los elementos */
+  transition: all 0.5s;
+}
+
+div {
+  display: inline-block;
+}
+
+.area-tarjeta,
+.tarjeta,
+.cara-trasera,
+.cara-superior {
+  cursor: pointer;
+  width: var(--w);/*ancho*/
+  min-width: 100px;/*ancho minimo*/
+  height: var(--h);/*largo*/
+  border-radius: 20px;
+}
+
+.tarjeta {
+  position: relative;
+  transform-style: preserve-3d;/*para ver ambos lados*/
+  animation: iniciar 5s;
+}
+
+.cara-superior, .cara-trasera {
+  position: absolute;
+  backface-visibility: hidden;
+  box-shadow: inset 0 0 0 5px #581845;/*borde de tarjeta */
+  display: flex;
+}
+.area-tarjeta:hover .tarjeta{
+  transform: rotateY(180deg);
+}
+.cara-trasera {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+.cara-superior {
+  background: #900c3f;
+}
+@keyframes inicio {
+  20%,90%{/*gira la cara*/
+      transform: rotateY(180deg);
+  }
+  0%,100%{/*rota la cara*/
+    transform: rotateY(0deg);
+  }
+}
