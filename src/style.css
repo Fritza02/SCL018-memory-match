@@ -35,11 +35,11 @@ main {
   flex-wrap: wrap;/*La flex-wrap propiedad especifica si los elementos flexibles deben ajustarse o no.
   El wrapvalor especifica que los elementos flexibles se ajustarán si es necesario*/
   justify-content: center;
-}
+}  
 section {
   flex: 70%;
   /*background-color: turquoise;*/
-  padding:20px;
+  padding: 20px;
   box-sizing: border-box;
 }
 aside {
@@ -56,16 +56,16 @@ aside {
   height: 50%;
 }
 button {
-background-color: transparent;
-border: none;
+  background-color: transparent;
+  border: none;
 }
 .sofa {
-width: 60%;
-height: 70%;
+  width: 60%;
+  height: 70%;
 }
 .sofa:hover {
-background-color: yellow;
-}
+  background-color: yellow;
+}  
 :root {
   --w: calc(20vw /2);/*ancho */
   --h: calc(58vh /4);/*alto */
@@ -117,8 +117,8 @@ div {
 /*
 .tablero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  margin-left: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+ /* margin-left: 2px;
   margin-right: 2px;
   margin-top: 2px;
   grid-gap: 2px;
