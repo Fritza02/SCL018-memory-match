@@ -10,15 +10,8 @@
   src: url("fuentes/Simpsonfont DEMO.otf");
 }
 body {
-  /*background: white;*/
   width: 100%;/*ancho de un elemento*/
-  /*height: 100%;/*altura de un elemnto */
-  /*display: flex;/*Los elementos se distribuyen de izquierda a derecha*/
-  /*justify-content: center;/* distribuye el espacio entre y alrededor de los items flex*/
-  /*position: absolute;/*posicionar elementos de manera absoluta*/
-  text-align: center; /*alineacion del texto en el centro*/
   background-image: url("imagenes/fondoo.png") ;
-  /*background-size: cover;*/
   font-family: "simpsonFont";/*fuentes del texto*/
 }
 .contenedor-index {
@@ -26,34 +19,53 @@ body {
   overflow: auto;/*la overflowpropiedad css controla lo que sucede con el contenido que es demasiado grande para caber en un área*/
   margin: 0 auto;
 }
-.contenedor-titulo h1 {
-  /*font-family: "simpsonFont";/*fuentes del texto*/
-  font-size: 70px;/*dimension de letras*/
-  color : #FED420;
-  /*text-shadow:#dfbb1c 0.1em 0.1em 0.2em;*/
-  text-align: center;
-  margin: 0 ;
-  position: relative;
-  background-color: yellow;
+header{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+.titulo {
+  width: 60%;
+  height: 60%;
+  margin: 0;
+  padding: 0;
+}
+main {
+  display: flex;/*para comenzar a trabajar con el modelo flex box, debemos comenzar por definir un contener flexible-> display:flex;*/
+  flex-wrap: wrap;/*La flex-wrap propiedad especifica si los elementos flexibles deben ajustarse o no.
+  El wrapvalor especifica que los elementos flexibles se ajustarán si es necesario*/
+  justify-content: center;
+}  
 section {
-  width: 80%;
-  background-color: turquoise;
-  padding:20px;
-  float:left;
+  flex: 70%;
+  /*background-color: turquoise;*/
+  padding: 20px;
   box-sizing: border-box;
 }
 aside {
-  width: 20%;
+  flex: 30%;
   padding: 20px;
-  box-sizing: border-box;
-  float: left;
-  background-color: yellowgreen;
+  /*box-sizing: border-box;*/
+  /*background-color: yellowgreen;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center
 }
 .tv {
   width: 50%;
   height: 50%;
 }
+button {
+  background-color: transparent;
+  border: none;
+}
+.sofa {
+  width: 60%;
+  height: 70%;
+}
+.sofa:hover {
+  background-color: yellow;
+}  
 :root {
   --w: calc(20vw /2);/*ancho */
   --h: calc(58vh /4);/*alto */
@@ -66,7 +78,6 @@ div {
 .cara-trasera,
 .cara-superior {
   width: var(--w);/*ancho*/
-  /*min-width: 200px;/*ancho minimo*/
   height: var(--h);/*largo*/
   border-radius: 20px;
 }
@@ -99,11 +110,16 @@ div {
     transform: rotateY(0deg);
   }
 }
+.imagenesSimpsons {
+  height: 90%;
+  max-width: 90%;
+}
+/*
 .tablero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  margin-left: 2px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+ /* margin-left: 2px;
   margin-right: 2px;
   margin-top: 2px;
   grid-gap: 2px;
-}
+}*/
