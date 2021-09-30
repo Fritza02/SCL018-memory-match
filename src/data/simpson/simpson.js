@@ -4,7 +4,7 @@ export default {
       { id: 'marge', imageUrl: 'https://i.imgur.com/96NVlic.png', bgColor: '#FFEC5E' },
       { id: 'maggie', imageUrl: 'https://i.imgur.com/DJBjYIy.png', bgColor: '#FFEC5E' },
       { id: 'lisa', imageUrl: 'https://i.imgur.com/nFM12Nm.png', bgColor: '#FFEC5E' },
-      { id: 'homero', imageUrl: 'https://i.imgur.com/dDZgcys.png', bgColor: '#FFEC5E' },
+      { id: 'homero', imageUrl: 'https://i.imgur.com/mPafg5Y.png', bgColor: '#FFEC5E' },
       { id: 'abraham', imageUrl: 'https://i.imgur.com/YIed574.png', bgColor: '#FFEC5E' },
       { id: 'bart', imageUrl: 'https://i.imgur.com/shc45uL.png', bgColor: '#FFEC5E' },
       { id: 'barney', imageUrl: 'https://i.imgur.com/eyvEDbF.png', bgColor: '#FFEC5E' },
