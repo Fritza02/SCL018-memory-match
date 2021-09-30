@@ -123,3 +123,8 @@ div {
   margin-top: 2px;
   grid-gap: 2px;
 }*/
+/*@media (max-width: 479px)
+.tablero {
+    display: none!important;
+    height: 0!important;
+      }*/
