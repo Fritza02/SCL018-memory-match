@@ -42,7 +42,7 @@ const App = () => {
       let card = document.createElement("div");
 
       card.innerHTML = 
-      
+     
       `<div class="area-tarjeta">
       <div class="tarjeta">
       <div class="cara-trasera"> <img src = "${element.imageUrl} class="imagesSimpsons"/> </div>
@@ -64,14 +64,12 @@ const App = () => {
     document.querySelectorAll(".area-tarjeta").forEach(myFunction2);
 
     function myFunction2(element) {    
-    elemento.addEventListener("click", descubrir);
+
+    element.addEventListener("click", descubrir);
     }
   } 
   //funcion para revolver 
-  // 1 
-  
-
-  
+  // 1
 
 
   /*const el = document.createElement('div');
