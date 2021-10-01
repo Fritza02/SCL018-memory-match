@@ -16,6 +16,18 @@ import simpson from '../data/simpson/simpson.js';
 
 const App = () => {
 
+  const firstPage = document.getElementById("firstPage");
+  const secondPage = document.getElementById("secondPage");
+  
+  const cambioPagina = document.getElementById("gif");
+  
+  cambioPagina.addEventListener("click", () => {
+    /*ocultar página 1*/
+    firstPage.style.display = "none";
+    /*mostrar página 2*/
+    secondPage.style.display = "block";
+});
+
   //1) Crear una variable que contenga las imágenes a utilizar en las tarjetas, llamandolas desde el objeto en main.js.
 
   let images = simpson.items; /*estamos al objeto simpson pero solo al array items*/ 
@@ -42,7 +54,7 @@ const App = () => {
       let card = document.createElement("div");
 
       card.innerHTML = 
-     
+
       `<div class="area-tarjeta">
       <div class="tarjeta">
       <div class="cara-trasera"> <img src = "${element.imageUrl} class="imagesSimpsons"/> </div>

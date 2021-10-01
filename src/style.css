@@ -116,7 +116,7 @@ div {
   display: flex;
 }
 .area-tarjeta:hover .tarjeta{
- transform: rotateY(180deg);
+transform: rotateY(180deg);
 }
 .cara-trasera {
   background-color:#FFEC5E;
@@ -129,4 +129,7 @@ div {
 .imagesSimpsons {
   height: 90%;
   max-width: 90%;
+}
+.page2 {
+  display: none;
 }
