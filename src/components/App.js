@@ -54,7 +54,7 @@ const App = () => {
       let card = document.createElement("div");
 
       card.innerHTML = 
-     
+
       `<div class="area-tarjeta">
       <div class="tarjeta">
       <div class="cara-trasera"> <img src = "${element.imageUrl} class="imagesSimpsons"/> </div>
