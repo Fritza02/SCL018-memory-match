@@ -9,13 +9,32 @@
   </head>
 
   <body>
-  <div class="contenedor-index"></div>
-  <header class="contenedor-titulo" >
-  <img id="titulo" class="titulo" src="imagenes/titulo2.png">
+    <!--primera pagina-->
+    <main class="firstPage" id="firstPage">
+      <header class="container-title1" >
+        <h1>Bienvenide  a </h1> 
+        <img id="title2" class="title2" src="imagenes/titulo2.png">
+      </header> 
+      <section class="instructions">
+        <h2>Instrucciones</h2>
+        <h2> 1.Tienes 5 segundos para memorizar la mayor cantidad de imagenes.</h2>
+        <h2> 2.Tienes 30 segundos para resolver el memorice completamente.</h2>
+        <button type="button"><img src="gif/TWJE2.gif" class="gif"></button>
+      </section>
+    </main>
+    <footer class="foot1page">
+      <audio controls >
+        <source src="musica/audio-intro.mp3"  type="audio/mp3">
+      </audio>
+    </footer>
+    <!--Segunda pagina-->
+  <div class="conteiner-index"></div>
+  <header class="conteiner-title2" >
+  <img id="title2" class="title2" src="imagenes/titulo2.png">
   </header>
-  <main>
-    <section id="tablero" class="tablero"></section>
-    <aside><button type="button"><img src="imagenes/sillonButton.png" class="sofa"><img src="imagenes/tvSimpsons.png" class="tv"></button></aside>
+  <main class="page2">
+    <section id="boardGame" class="boardGame"></section>
+    <!--<img src="imagenes/tvSimpsons.png" class="tv">-->
   </main>
 
   </div>
@@ -23,3 +42,4 @@
     <script src="main.js" type="module"></script>
   </body>
 </html>
+

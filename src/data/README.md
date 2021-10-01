@@ -36,3 +36,10 @@ mv data/gatitos/pokemon.json data/gatitos/gatitos.json
 Ahora ya puedes editar el contenido de los archivos de gatitos según tus
 necesidades. Ten en cuenta que puedes cambiar el número de elementos (cartas) en
 cada set si quieres también cambiar la dificultad del juego :wink:.
+
+
+
+EN APP.JS INSTRUCCIONES DE QUÉ HACER AHORA:
+1) click al comenzar revuelva las cartas.
+
+addEventListener

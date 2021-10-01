@@ -18,50 +18,57 @@ const App = () => {
 
   //1) Crear una variable que contenga las imágenes a utilizar en las tarjetas, llamandolas desde el objeto en main.js.
 
-  let imagenes = simpson.items; /*estamos al objeto simpson pero solo al array items*/ 
+  let images = simpson.items; /*estamos al objeto simpson pero solo al array items*/ 
   //console.log(imagenes);
 
   //2) Duplicar estas imágenes con la método concat() para que queden en pares.
 
-  let totalImagenes = imagenes.concat(imagenes);
+  let totalImages = images.concat(images);
   
-  totalImagenes.sort(() => Math.random() - 0.5)
+  totalImages.sort(() => Math.random() - 0.5)
 
   //3) Crear una función que reparta las tarjetas en un html dinámico.
 
-  function reparteTarjetas() {
+  function outCards() {
 
-    let mesa = document.getElementById("tablero");
+    let table = document.getElementById("boardGame");
 
-    mesa.innerHTML = " ";
+    table.innerHTML = " ";
 
-    totalImagenes.forEach(myFunction);
+    totalImages.forEach(myFunction);
 
-    function myFunction(elemento) {
+    function myFunction(element) {
     
-      let tarjeta = document.createElement("div");
+      let card = document.createElement("div");
 
-      tarjeta.innerHTML = 
-      
+      card.innerHTML =
+
       `<div class="area-tarjeta">
       <div class="tarjeta">
-      <div class="cara-trasera"> <img src = "${elemento.imageUrl} class="imagenesSimpsons"/> </div>
+      <div class="cara-trasera"> <img src = "${element.imageUrl} class="imagesSimpsons"/> </div>
       <div class="cara-superior">
       </div>
       </div>
       </div>`
       
-      mesa.appendChild(tarjeta);
+      table.appendChild(card);
     }  
     
     }
-    reparteTarjetas();
+    function descubrir() {
+      //alert('hola');
+      this.classList.add("cara-trasera");
+    }
+    outCards();
+
+    document.querySelectorAll(".area-tarjeta").forEach(myFunction2);
+
+    function myFunction2(element) {    
+    element.addEventListener("click", descubrir);
+    }
   } 
   //funcion para revolver 
-  // 1 
-  
-
-  
+  // 1
 
 
   /*const el = document.createElement('div');
