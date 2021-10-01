@@ -116,7 +116,7 @@ div {
   display: flex;
 }
 .area-tarjeta:hover .tarjeta{
-  transform: rotateY(180deg);
+ transform: rotateY(180deg);
 }
 .cara-trasera {
   background-color:#FFEC5E;
