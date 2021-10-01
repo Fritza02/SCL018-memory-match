@@ -130,3 +130,6 @@ div {
   height: 90%;
   max-width: 90%;
 }
+.page2 {
+  display: none;
+}
