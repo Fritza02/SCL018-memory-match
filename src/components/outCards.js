@@ -33,6 +33,7 @@ const outCards = () => {
     
     table.appendChild(card);
     }
+    
     randomImages.forEach(myFunction);
   //  return node;
 
@@ -48,12 +49,12 @@ const myFunction2 = (element) => {
     }
 
     e.currentTarget.classList.add("descubierta")
+
     });
     }
 
     document.querySelectorAll(".tarjeta").forEach(myFunction2);
 
-    
 }
     export default outCards;
 

@@ -15,9 +15,6 @@
 //   .then(console.log)
 //   .catch(console.error);
 //
-
-
-
 const App = () => {
 
   const firstPage = document.createElement('main');
@@ -42,7 +39,7 @@ const App = () => {
 
     const explicacion = document.createElement('div');
     explicacion.classNam = 'explicacion';
-    explicacion.textContent = 'INSTRUCIONES: Tienes 5 segundos para memorizar la mayor cantidad de imagenes, antes de que comience el juego .Tendras SOLO 60 segundos para completar'
+    explicacion.innerHTML = 'INSTRUCIONES: Tienes 5 segundos para memorizar la mayor cantidad de imagenes,antes de que comience el juego . Tendras SOLO 60 segundos para completar';
     section1.appendChild(explicacion);
 
     const gif = document.createElement('img');
@@ -87,5 +84,4 @@ export default App;
 
   return el;
   };*/
-
 
