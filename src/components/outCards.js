@@ -23,36 +23,38 @@ const outCards = () => {
 
         card.innerHTML =
 
-      `<div class="area-tarjeta">
-      <div class="tarjeta">
-      <div class="cara-trasera"> <img src = "${element.imageUrl} class="imagesSimpsons"/> </div>
-      <div class="cara-superior">
-      </div>
-      </div>
-      </div>`
-      
-      table.appendChild(card);
-    }  
+    `<div class="area-tarjeta">
+    <div class="tarjeta">
+    <div class="cara-trasera"> <img src = "${element.imageUrl} class="imagesSimpsons"/> </div>
+    <div class="cara-superior">
+    </div>
+    </div>
+    </div>`
+    
+    table.appendChild(card);
+    }
+    
     randomImages.forEach(myFunction);
   //  return node;
 
   //outCards();
 
-    const myFunction2 = (element) => {    
+const myFunction2 = (element) => {    
     element.addEventListener("click", (e) => { //el que escucho el evento
 
-      const tarjetasDescubiertas = document.querySelectorAll(".descubierta");
+    const tarjetasDescubiertas = document.querySelectorAll(".descubierta");
 
-      if(tarjetasDescubiertas.length > 1){
+    if(tarjetasDescubiertas.length > 1){
         return;
-      }
+    }
 
-      e.currentTarget.classList.add("descubierta")
+    e.currentTarget.classList.add("descubierta")
+
     });
     }
 
     document.querySelectorAll(".tarjeta").forEach(myFunction2);
 
-    
-  }
+}
     export default outCards;
+

@@ -30,7 +30,7 @@ body {
   align-items: center;
 }
 .title1 {
-  width: 100%;
+width: 100%;
 }
 .instructions { /*seccion1*/
   display:flex;
@@ -39,12 +39,13 @@ body {
   font-family: "simpsonFont";
   color:#FFEC5E;
   text-shadow: black 0.1em 0.1em 0.2em ;/*sombra del texto*/
-  /*justify-content: space-between*/
+  /*justify-content: space-between*/ /*se suponía se separaba las instrucciones del boton gif*/
 }
-.explicacion{
+.explicacion {
   width: 100%;
-  letter-spacing:normal;
-  line-break:auto;
+  /*white-space: pre-line;*/
+  line-break: auto;
+
 }
 /*button {
   background-color: transparent;
@@ -131,3 +132,5 @@ div {
 .tarjeta.descubierta {
   transform: rotateY(-180deg);
 }
+
+

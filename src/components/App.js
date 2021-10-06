@@ -6,7 +6,7 @@
 //import random from "../javascrip/random.js";
 //import outCards from 'outCards.js';
 //console.log(simpson);
-//
+
 // O alternativamente podríamos cargar el JSON de forma asíncrona usando
 // `fetch` en el momento que consideremos necesario.
 //
@@ -15,7 +15,6 @@
 //   .then(console.log)
 //   .catch(console.error);
 //
-
 const App = () => {
 
   const firstPage = document.createElement('main');
@@ -50,23 +49,23 @@ const App = () => {
     section1.style.display = 'none' ;
     section2.style.display = 'block' ;
     });
-     section1.appendChild(gif);
+    section1.appendChild(gif);
 
-     const section2 = document.createElement('section');
-     section2.className = "pageTwo";
-     firstPage.appendChild(section2);
+    const section2 = document.createElement('section');
+    section2.className = "pageTwo";
+    firstPage.appendChild(section2);
 
-     const boardGame = document.createElement('div');
-     boardGame.classNam = 'boardGame';
-     boardGame.id = 'boardGame';
-     section2.appendChild(boardGame);
+    const boardGame = document.createElement('div');
+    boardGame.classNam = 'boardGame';
+    boardGame.id = 'boardGame';
+    section2.appendChild(boardGame);
 
-     /*let images = simpson.items;
-     let totalImages = images.concat(images);
-     let randomImages = random(totalImages);
-     console.log(randomImages);*/
+    /*let images = simpson.items;
+    let totalImages = images.concat(images);
+    let randomImages = random(totalImages);
+    console.log(randomImages);*/
 
-  return firstPage;
+    return firstPage;
 };
 
 export default App;
@@ -75,3 +74,14 @@ export default App;
     audioElement.setAttribute('src', 'musica/audio-intro.mp3'); 
     audioElement.setAttribute('autoplay', 'autoplay');
     section.appendChild(audioElement);*/
+
+
+
+  /*const el = document.createElement('div');
+
+  el.className = 'App';
+  el.textContent = '';
+
+  return el;
+  };*/
+
