@@ -13,6 +13,10 @@ body {
   width: 100%;/*ancho de un elemento*/
   background-image: url("imagenes/fondoo.png") ;
   font-family: "simpsonFont";/*fuentes del texto*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 .firstPage { /*main pagina 1*/
   display: flex;/*para comenzar a trabajar con el modelo flex box, debemos comenzar por definir un contener flexible-> display:flex;*/
@@ -25,61 +29,51 @@ body {
   flex-direction: column;
   align-items: center;
 }
-h1{
-  color:#FFEC5E;
-  font-size: 40pt;/*dimension de letras*/
-  text-shadow: black 0.1em 0.1em 0.2em ;/*sombra del texto*/
-  text-align: center;
+.title1 {
+  width: 100%;
 }
-.instructions { /*seccion pagina 1*/
+.instructions { /*seccion1*/
   display:flex;
   flex-direction: column;
   align-items: center;
   font-family: "simpsonFont";
   color:#FFEC5E;
   text-shadow: black 0.1em 0.1em 0.2em ;/*sombra del texto*/
+  /*justify-content: space-between*/
 }
-button {
+.explicacion{
+  width: 100%;
+  letter-spacing:normal;
+  line-break:auto;
+}
+/*button {
   background-color: transparent;
   border: none;
-}
+}*/
 .gif {
-  width: 80%;
-  height: 80%;
+  width: 30%;
+  /*height: 80%;*/
   border-radius: 12px;
 }
 .gif:hover {
-  background-color: yellow;
-}  
-.foot1page { /*footer pagina 1*/
-  display: flex;
+  color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 0 20px 30px rgb(3, 45, 61);
+  transition: all 0.2s ease;
+}
+/*.foot1page { /*footer pagina 1*/
+  /*display: flex;
   justify-content: space-evenly;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-}
-.conteiner-index {
-  width: 100%;
-  overflow: auto;/*la overflowpropiedad css controla lo que sucede con el contenido que es demasiado grande para caber en un área*/
-  margin: 0 auto;
-}
-.conteiner-title2 {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.title2 {
-  width: 60%;
-  height: 60%;
-  margin: 0;
-  padding: 0;
-}
-.page2 {
+}*/
+.pageTwo { /*seccion2*/
   display: flex;/*para comenzar a trabajar con el modelo flex box, debemos comenzar por definir un contener flexible-> display:flex;*/
   flex-wrap: wrap;/*La flex-wrap propiedad especifica si los elementos flexibles deben ajustarse o no.
   El wrapvalor especifica que los elementos flexibles se ajustarán si es necesario*/
   justify-content: center;
+  display: none;
 }  
 .boardGame { /*tablero*/
   flex: 70%;
@@ -98,29 +92,33 @@ button {
 div {
   display: inline-block;
 }
-.area-tarjeta,
-.tarjeta,
-.cara-trasera,
-.cara-superior {
+.area-tarjeta {
   width: var(--w);/*ancho*/
   height: var(--h);/*largo*/
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tarjeta, .cara-superior, .cara-trasera {
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
 }
 .tarjeta {
   position: relative;/*le da una posicion en la pagina*/
   transform-style: preserve-3d;/*para ver ambos lados*/
+  transition: 1s;
+  margin: 5px;
 }
-.cara-superior,.cara-trasera {
+.cara-superior, .cara-trasera {
   position: absolute;
   backface-visibility: hidden;
-  display: flex;
-}
-.area-tarjeta:hover .tarjeta{
-transform: rotateY(180deg);
 }
 .cara-trasera {
   background-color:#FFEC5E;
   transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
 }
 .cara-superior {
   background-image: url("imagenes/caravisiblee.jpg");
@@ -130,6 +128,6 @@ transform: rotateY(180deg);
   height: 90%;
   max-width: 90%;
 }
-.page2 {
-  display: none;
+.tarjeta.descubierta {
+  transform: rotateY(-180deg);
 }
