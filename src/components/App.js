@@ -2,9 +2,11 @@
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
 //
-import simpson from '../data/simpson/simpson.js';
+//import simpson from '../data/simpson/simpson.js';
+//import random from "../javascrip/random.js";
+//import outCards from 'outCards.js';
 //console.log(simpson);
-//
+
 // O alternativamente podríamos cargar el JSON de forma asíncrona usando
 // `fetch` en el momento que consideremos necesario.
 //
@@ -14,74 +16,68 @@ import simpson from '../data/simpson/simpson.js';
 //   .catch(console.error);
 //
 
+
+
 const App = () => {
 
-  const firstPage = document.getElementById("firstPage");
-  const secondPage = document.getElementById("secondPage");
-  
-  const cambioPagina = document.getElementById("gif");
-  
-  cambioPagina.addEventListener("click", () => {
-    /*ocultar página 1*/
-    firstPage.style.display = "none";
-    /*mostrar página 2*/
-    secondPage.style.display = "block";
-});
+  const firstPage = document.createElement('main');
+    firstPage.className = 'firstPage';
+    firstPage.id = 'firstPage'
 
-  //1) Crear una variable que contenga las imágenes a utilizar en las tarjetas, llamandolas desde el objeto en main.js.
+    const header = document.createElement('header');
+    header.className = 'container-title1';
+    header.id = 'container-title1';
+    firstPage.appendChild(header);
 
-  let images = simpson.items; /*estamos al objeto simpson pero solo al array items*/ 
-  //console.log(imagenes);
+    const titulo1 = document.createElement('img');
+    titulo1.className = 'title1';
+    titulo1.src ='imagenes/titulo1.png';
+    header.appendChild(titulo1);
 
-  //2) Duplicar estas imágenes con la método concat() para que queden en pares.
+    /*const bloque = document.createElement('div');
+    bloque.className = 'instructions2'*/
+    const section1 = document.createElement('section');
+    section1.className = "instructions";
+    firstPage.appendChild(section1);
 
-  let totalImages = images.concat(images);
-  
-  totalImages.sort(() => Math.random() - 0.5)
+    const explicacion = document.createElement('div');
+    explicacion.classNam = 'explicacion';
+    explicacion.textContent = 'INSTRUCIONES: Tienes 5 segundos para memorizar la mayor cantidad de imagenes, antes de que comience el juego .Tendras SOLO 60 segundos para completar'
+    section1.appendChild(explicacion);
 
-  //3) Crear una función que reparta las tarjetas en un html dinámico.
+    const gif = document.createElement('img');
+    gif.className = 'gif';
+    gif.src = 'gif/TWJE2.gif';
+    gif.addEventListener('click',() => {
+    section1.style.display = 'none' ;
+    section2.style.display = 'block' ;
+    });
+    section1.appendChild(gif);
 
-  function outCards() {
+    const section2 = document.createElement('section');
+    section2.className = "pageTwo";
+    firstPage.appendChild(section2);
 
-    let table = document.getElementById("boardGame");
+    const boardGame = document.createElement('div');
+    boardGame.classNam = 'boardGame';
+    boardGame.id = 'boardGame';
+    section2.appendChild(boardGame);
 
-    table.innerHTML = " ";
+    /*let images = simpson.items;
+    let totalImages = images.concat(images);
+    let randomImages = random(totalImages);
+    console.log(randomImages);*/
 
-    totalImages.forEach(myFunction);
+    return firstPage;
+};
 
-    function myFunction(element) {
-    
-      let card = document.createElement("div");
+export default App;
 
-      card.innerHTML = 
+/*let audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'musica/audio-intro.mp3'); 
+    audioElement.setAttribute('autoplay', 'autoplay');
+    section.appendChild(audioElement);*/
 
-      `<div class="area-tarjeta">
-      <div class="tarjeta">
-      <div class="cara-trasera"> <img src = "${element.imageUrl} class="imagesSimpsons"/> </div>
-      <div class="cara-superior">
-      </div>
-      </div>
-      </div>`
-      
-      table.appendChild(card);
-    }  
-    
-    }
-    function descubrir() {
-      //alert('hola');
-      this.classList.add("cara-trasera");
-    }
-    outCards();
-
-    document.querySelectorAll(".area-tarjeta").forEach(myFunction2);
-
-    function myFunction2(element) {    
-
-    element.addEventListener("click", descubrir);
-    }
-  } 
-  //funcion para revolver 
-  // 1
 
 
   /*const el = document.createElement('div');
@@ -92,4 +88,4 @@ const App = () => {
   return el;
   };*/
 
-export default App;
+
