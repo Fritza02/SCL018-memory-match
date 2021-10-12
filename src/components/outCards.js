@@ -11,6 +11,7 @@ const outCards = () => {
     let images = simpson.items;
     let totalImages = images.concat(images);
     let randomImages = shuffle(totalImages);
+  
      //console.log(randomImages);
 
     table = document.getElementById('boardGame');
@@ -39,7 +40,7 @@ const outCards = () => {
 
   //outCards();
 
-const myFunction2 = (element) => {    
+  const myFunction2 = (element) => {    
     element.addEventListener("click", (e) => { //el que escucho el evento
 
     const tarjetasDescubiertas = document.querySelectorAll(".descubierta:not(.ganadora)");
@@ -92,6 +93,7 @@ const myFunction2 = (element) => {
             elemento.classList.remove("descubierta");
             });
         }, 1000);
+
     }
 
     }
@@ -100,4 +102,5 @@ document.querySelectorAll(".tarjeta").forEach(myFunction2);
 
 }
 export default outCards;
+
 

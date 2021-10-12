@@ -8,5 +8,3 @@ const shuffle = (data) => {
     return data;
 };
 export default shuffle ;
-
-    

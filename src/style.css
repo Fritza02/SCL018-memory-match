@@ -80,7 +80,7 @@ p {
 }
 .gif:hover {
   color: rgba(255, 255, 255, 1) !important;
-  box-shadow: 0 20px 30px rgb(3, 45, 61);
+  box-shadow: 0px 10px 70px #FFEC5E;
   transition: all 0.2s ease;
 }
 /*.foot1page { /*footer pagina 1*/
@@ -177,6 +177,4 @@ div {
       transform: rotateY(0deg);
   }
 }
-
-
 
