@@ -1,5 +1,5 @@
 //import App from '/components/App.js';
-import random from "./shuffle.js";
+import shuffle from "./shuffle.js";
 import simpson from '../data/simpson/simpson.js';
 
 
@@ -10,8 +10,8 @@ const outCards = () => {
     //return node;
     let images = simpson.items;
     let totalImages = images.concat(images);
-    let randomImages = random(totalImages);
-     //console.log(randomImages);
+    let randomImages = shuffle(totalImages);
+    //console.log(randomImages);
 
     table = document.getElementById('boardGame');
     
@@ -39,22 +39,67 @@ const outCards = () => {
 
   //outCards();
 
-const myFunction2 = (element) => {    
+  const myFunction2 = (element) => {    
     element.addEventListener("click", (e) => { //el que escucho el evento
 
-    const tarjetasDescubiertas = document.querySelectorAll(".descubierta");
+    const tarjetasDescubiertas = document.querySelectorAll(".descubierta:not(.ganadora)");
+    //console.log(tarjetasDescubiertas);
 
-    if(tarjetasDescubiertas.length > 1){
+        if(tarjetasDescubiertas.length > 1) {
         return;
-    }
+        }
+    e.currentTarget.classList.add("descubierta");
 
-    e.currentTarget.classList.add("descubierta")
+    let numeroDescubiertas = document.querySelectorAll(".descubierta:not(.ganadora)"); //El método querySelectorAll() de un Element devuelve una NodeList estática. Un NodeListobjeto es una lista (colección) de nodos extraídos de un documento.
+    //console.log(numeroDescubiertas);
 
+        if(numeroDescubiertas.length < 2) {
+        return;
+        }
+
+    estados(numeroDescubiertas);
+    
     });
+
+    let estados = (tarjetasComparadas) => {
+
+        let firstOption = tarjetasComparadas[0].dataset.imagen;
+        let secondOption = tarjetasComparadas[1].dataset.imagen;
+
+        if(firstOption === secondOption) { 
+
+            ganador(tarjetasComparadas);
+
+        } else if (firstOption !== secondOption ) {
+
+            perdedor(tarjetasComparadas);
+        }
+    }
+    let ganador = (lasTarjetas) => {
+        console.log("ganadora");
+        lasTarjetas.forEach((elemento)=>{
+            elemento.classList.add("ganadora")
+        })
+    }
+    let perdedor = (lasTarjetas) => {
+        console.log("perdedora");
+        lasTarjetas.forEach((elemento)=>{
+        elemento.classList.remove("ganadora");
+        })
+
+        setTimeout( () => {
+            lasTarjetas.forEach((elemento) => {
+            elemento.classList.remove("descubierta");
+            });
+        }, 1000);
     }
 
-    document.querySelectorAll(".tarjeta").forEach(myFunction2);
+    }
+
+document.querySelectorAll(".tarjeta").forEach(myFunction2);
 
 }
-    export default outCards;
+export default outCards;
+
+
 

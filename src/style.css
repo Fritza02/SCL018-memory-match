@@ -17,13 +17,20 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-.firstPage { /*main pagina 1*/
-  display: flex;/*para comenzar a trabajar con el modelo flex box, debemos comenzar por definir un contener flexible-> display:flex;*/
-  flex-wrap: wrap;/*La flex-wrap propiedad especifica si los elementos flexibles deben ajustarse o no.
-  El wrapvalor especifica que los elementos flexibles se ajustarán si es necesario*/
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
+/*.firstPage { /*main pagina 1*/
+ /* display: flex;/*para comenzar a trabajar con el modelo flex box, debemos comenzar por definir un contener flexible-> display:flex;*/
+  /*flex-wrap: wrap;/*La flex-wrap propiedad especifica si los elementos flexibles deben ajustarse o no.
+  El wrapvalor especifica que los elementos flexibles se ajustarán si es necesario*/
+  /*justify-content: center;
+  flex-direction: column;
+  aligner-items: center;
+}*/
 .container-title1 { /*header pagina 1*/
   display:flex;
   flex-direction: column;
@@ -41,24 +48,39 @@ width: 100%;
   text-shadow: black 0.1em 0.1em 0.2em ;/*sombra del texto*/
   /*justify-content: space-between*/ /*se suponía se separaba las instrucciones del boton gif*/
 }
-.explicacion {
+article {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  /*white-space: pre-line;*/
+  white-space: pre-line;
   line-break: auto;
-
+  font-size: 30pt;
+  align-items: center
+}
+p {
+  font-size: 20pt;
+  letter-spacing: 2px;
 }
 /*button {
   background-color: transparent;
   border: none;
 }*/
 .gif {
-  width: 30%;
-  /*height: 80%;*/
-  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  animation: float 5s infinite;
+  position: relative;
+  bottom: -70px;
+}
+@keyframes float {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-20px);}
+  100% {transform: translateY(0px);}
 }
 .gif:hover {
   color: rgba(255, 255, 255, 1) !important;
-  box-shadow: 0 20px 30px rgb(3, 45, 61);
+  box-shadow: 0px 10px 70px #FFEC5E;
   transition: all 0.2s ease;
 }
 /*.foot1page { /*footer pagina 1*/
@@ -77,10 +99,13 @@ width: 100%;
   display: none;
 }  
 .boardGame { /*tablero*/
+  /*display: flex;
   flex: 70%;
   /*background-color: turquoise;*/
-  padding: 20px;
-  box-sizing: border-box;
+  /*padding: 20px;
+  box-sizing: border-box;*/
+  display: flex;
+  flex-wrap: wrap;
 }
 /*.tv {
   width: 50%;
@@ -91,7 +116,9 @@ width: 100%;
   --h: calc(58vh /4);/*alto */
 }
 div {
-  display: inline-block;
+  display: grid;
+  margin: auto;
+  grid-template-columns: auto auto auto auto;
 }
 .area-tarjeta {
   width: var(--w);/*ancho*/
@@ -99,6 +126,9 @@ div {
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: 5px;
 }
 .tarjeta, .cara-superior, .cara-trasera {
   width: 100%;
@@ -110,6 +140,7 @@ div {
   transform-style: preserve-3d;/*para ver ambos lados*/
   transition: 1s;
   margin: 5px;
+  animation: iniciar 5s;
 }
 .cara-superior, .cara-trasera {
   position: absolute;
@@ -132,5 +163,18 @@ div {
 .tarjeta.descubierta {
   transform: rotateY(-180deg);
 }
+.tarjeta.ganadora {
+  pointer-events: none;
+}
+@keyframes iniciar {
 
+  60%,
+  90% {
+      transform: rotateY(180deg);
+  }
+  30%,
+  100% {
+      transform: rotateY(0deg);
+  }
+}
 

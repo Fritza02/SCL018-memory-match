@@ -1,15 +1,27 @@
-import random from "./shuffle.js"
-const nombres =['fritza','mireya','constanza','ysandys']
-const resultados = random(nombres);
-describe('random', () => {
-    it('deberia ser una funcion', () => {
-      
-    expect(typeof random ).toBe('function');
+import shuffle from "./shuffle.js"
+
+describe("shuffle", () => {
+    it("debería ser una función", () => {
+      expect(typeof shuffle).toEqual('function');
+    });
+  
+    it('debería retornar 4 para "[1,2,3,4]"' , () => {
+      let array = [1,2,3,4];
+    expect(shuffle(array)).toHaveLength(4);
+    });
+  
+    it('debería retornar true para "[1,2,3,4]"' , () => {
+      let array = [1,2,3,4];
+    expect(shuffle(array)).toContain(3);
     });
     it('deberia randomizar un arreglo', () => {
-    /* expect(random (nombres)).toBe(['']);*/
-        expect(resultados.length).toBe(nombres.length);
-        expect(resultados[3]).not.toBe('ysandys');
+        let array = [1,2,3,4];
+        expect(shuffle(array).length).toBe(array.length);
+        expect(array[3]).not.toBe('4');
     });
-});
+})
+
+  
+  
+  
 

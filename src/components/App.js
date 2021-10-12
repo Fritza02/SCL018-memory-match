@@ -37,9 +37,11 @@ const App = () => {
     section1.className = "instructions";
     firstPage.appendChild(section1);
 
-    const explicacion = document.createElement('div');
+    const explicacion = document.createElement('article');
     explicacion.classNam = 'explicacion';
-    explicacion.innerHTML = 'INSTRUCIONES: Tienes 5 segundos para memorizar la mayor cantidad de imagenes,antes de que comience el juego . Tendras SOLO 60 segundos para completar';
+    explicacion.innerHTML = `<p1>instrucciones:</p1>
+    <p>1.Tienes/+5/+segundos/+para/+memorizar/+la/+mayor/+cantidad/+de/+personajes</p>
+    <p>2.Tienes/+60/+segundos/+para/+completar/+el/+juego</p>`
     section1.appendChild(explicacion);
 
     const gif = document.createElement('img');
@@ -55,10 +57,23 @@ const App = () => {
     section2.className = "pageTwo";
     firstPage.appendChild(section2);
 
+    const time = document.createElement('nav');
+    time.classNam = 'time';
+    section2.appendChild(time);
+
+    const tablero = document.createElement('article');
+    tablero.classNam = 'tablero';
+    section2.appendChild(tablero);
+
+    const tv = document.createElement('img');
+    tv.className = 'tv';
+    tv.src = 'imagenes/tvSimpsons1.png';
+    tablero.appendChild(tv);
+
     const boardGame = document.createElement('div');
     boardGame.classNam = 'boardGame';
     boardGame.id = 'boardGame';
-    section2.appendChild(boardGame);
+    tablero.appendChild(boardGame);
 
     /*let images = simpson.items;
     let totalImages = images.concat(images);
@@ -70,10 +85,14 @@ const App = () => {
 
 export default App;
 
-/*let audioElement = document.createElement('audio');
+/*let audio = document.createElement('audio');
+    audio.className = 'audio';
+    audio.setAttribute = 'controls';
+    section1.appendChild(audio);
+    let audioElement = document.createElement('source');
     audioElement.setAttribute('src', 'musica/audio-intro.mp3'); 
-    audioElement.setAttribute('autoplay', 'autoplay');
-    section.appendChild(audioElement);*/
+    audioElement.setAttribute('type', 'autoplay');
+    audio.appendChild(audioElement);*/
 
 
 
