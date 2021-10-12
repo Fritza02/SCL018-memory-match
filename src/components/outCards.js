@@ -11,7 +11,8 @@ const outCards = () => {
     let images = simpson.items;
     let totalImages = images.concat(images);
     let randomImages = shuffle(totalImages);
-    //console.log(randomImages);
+  
+     //console.log(randomImages);
 
     table = document.getElementById('boardGame');
     
@@ -24,13 +25,13 @@ const outCards = () => {
         card.innerHTML =
 
     `<div class="area-tarjeta">
-    <div class="tarjeta">
+    <div class="tarjeta" data-imagen="${element.imageUrl}"> 
     <div class="cara-trasera"> <img src = "${element.imageUrl} class="imagesSimpsons"/> </div>
     <div class="cara-superior">
     </div>
     </div>
     </div>`
-    
+    //Los atributos globales data-* forman una clase de atributos , llamados atributos de datos modificables , permite a la información propietaria ser intercambiada entre el HTML y su representación en el DOM que puede ser usada por scripts
     table.appendChild(card);
     }
     
@@ -92,6 +93,7 @@ const outCards = () => {
             elemento.classList.remove("descubierta");
             });
         }, 1000);
+
     }
 
     }
@@ -100,6 +102,5 @@ document.querySelectorAll(".tarjeta").forEach(myFunction2);
 
 }
 export default outCards;
-
 
 

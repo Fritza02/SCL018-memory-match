@@ -24,12 +24,12 @@ body {
   align-items: center;
 }
 /*.firstPage { /*main pagina 1*/
- /* display: flex;/*para comenzar a trabajar con el modelo flex box, debemos comenzar por definir un contener flexible-> display:flex;*/
-  /*flex-wrap: wrap;/*La flex-wrap propiedad especifica si los elementos flexibles deben ajustarse o no.
+  /*display: flex;/*para comenzar a trabajar con el modelo flex box, debemos comenzar por definir un contener flexible-> display:flex;*/
+/* flex-wrap: wrap;/*La flex-wrap propiedad especifica si los elementos flexibles deben ajustarse o no.
   El wrapvalor especifica que los elementos flexibles se ajustarán si es necesario*/
   /*justify-content: center;
   flex-direction: column;
-  aligner-items: center;
+  align-items: center;
 }*/
 .container-title1 { /*header pagina 1*/
   display:flex;
