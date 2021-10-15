@@ -1,81 +1,69 @@
 * {/*para todos los elementos */
   transition: all 0.5s;
-  cursor:url("imagenes/pezSimpsons1.png"), auto;
+  cursor:url('imagenes/pezSimpsons1.png'), auto;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 @font-face {
-  font-family: "simpsonFont";
-  src: url("fuentes/Simpsonfont DEMO.otf");
+  font-family: 'simpsonFont';
+  src: url('fuentes/Simpsonfont DEMO.otf');
 }
 body {
-  width: 100%;/*ancho de un elemento*/
-  background-image: url("imagenes/fondoo.png") ;
-  font-family: "simpsonFont";/*fuentes del texto*/
+  background-image: url('imagenes/fondoo.png') ;
+  font-family: 'simpsonFont';/*fuentes del texto*/
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
-/*.firstPage { /*main pagina 1*/
-  /*display: flex;/*para comenzar a trabajar con el modelo flex box, debemos comenzar por definir un contener flexible-> display:flex;*/
-/* flex-wrap: wrap;/*La flex-wrap propiedad especifica si los elementos flexibles deben ajustarse o no.
-  El wrapvalor especifica que los elementos flexibles se ajustarán si es necesario*/
-  /*justify-content: center;
+.firstPage { /*contenedor*/
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto ;
+  overflow: hidden;
+}
+.container-title1 { /*header*/
+  display: flex;
+  background-repeat: no-repeat;
   flex-direction: column;
   align-items: center;
-}*/
-.container-title1 { /*header pagina 1*/
-  display:flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
 }
 .title1 {
-width: 100%;
+width: 80%;
+align-items: center;
 }
 .instructions { /*seccion1*/
   display:flex;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
   flex-direction: column;
   align-items: center;
-  font-family: "simpsonFont";
+  font-family: 'simpsonFont';
   color:#FFEC5E;
   text-shadow: black 0.1em 0.1em 0.2em ;/*sombra del texto*/
-  /*justify-content: space-between*/ /*se suponía se separaba las instrucciones del boton gif*/
-}
-article {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  white-space: pre-line;
-  line-break: auto;
-  font-size: 30pt;
-  align-items: center
+  font-size: 100%;
 }
 p {
-  font-size: 20pt;
+  font-size:2rem;
   letter-spacing: 2px;
 }
-/*button {
-  background-color: transparent;
-  border: none;
-}*/
 .gif {
-  width: 300px;
-  height: 300px;
+  width: 20%;
+  height: 50%;
   border-radius: 50%;
   animation: float 5s infinite;
   position: relative;
-  bottom: -70px;
+  bottom: -30px;
 }
 @keyframes float {
   0% {transform: translateY(0px);}
-  50% {transform: translateY(-20px);}
+  50% {transform: translateY(-10px);}
   100% {transform: translateY(0px);}
 }
 .gif:hover {
@@ -83,34 +71,28 @@ p {
   box-shadow: 0px 10px 70px #FFEC5E;
   transition: all 0.2s ease;
 }
-/*.foot1page { /*footer pagina 1*/
-  /*display: flex;
-  justify-content: space-evenly;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}*/
 .pageTwo { /*seccion2*/
-  display: flex;/*para comenzar a trabajar con el modelo flex box, debemos comenzar por definir un contener flexible-> display:flex;*/
-  flex-wrap: wrap;/*La flex-wrap propiedad especifica si los elementos flexibles deben ajustarse o no.
-  El wrapvalor especifica que los elementos flexibles se ajustarán si es necesario*/
+  flex-wrap: wrap;
   justify-content: center;
   display: none;
-}  
-.boardGame { /*tablero*/
-  /*display: flex;
-  flex: 70%;
-  /*background-color: turquoise;*/
-  /*padding: 20px;
-  box-sizing: border-box;*/
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30px;
+} 
+nav{
+  width:100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tv {
+  margin-top: -70px;
+  width: 130px;
+} 
+.boardGame { /*tablero*/
+  justify-content: center;
   flex-wrap: wrap;
 }
-/*.tv {
-  width: 50%;
-  height: 50%;
-}*/
 :root {
   --w: calc(20vw /2);/*ancho */
   --h: calc(58vh /4);/*alto */
@@ -153,18 +135,92 @@ div {
   justify-content: center;
 }
 .cara-superior {
-  background-image: url("imagenes/caravisiblee.jpg");
+  background-image: url('imagenes/caravisiblee.jpg');
   background-size: cover;
 }
 .imagesSimpsons {
-  height: 90%;
-  max-width: 90%;
+  width: 100%;
+  height: auto;
 }
 .tarjeta.descubierta {
   transform: rotateY(-180deg);
 }
 .tarjeta.ganadora {
   pointer-events: none;
+}
+.finalGanador {
+  display: flex;
+  text-align: center;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 10;
+  font-family: 'simpsonFont';
+  color:#FFEC5E;
+}
+.finalPerdedor {
+  display: flex;
+  text-align: center;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 10;
+  font-family: "simpsonFont";
+  color:#FFEC5E;
+}
+.cronometro {
+text-align: center;
+/*background-image: url("imagenes/tvSimpsons1.png");*/
+}
+.puerco {
+  width: 20%;
+  position: relative;
+  bottom: -600px;
+}
+.puerco:hover {
+  background: rgb(168, 10, 155);
+  border-radius: 5%;
+}
+.celebracion {
+  width: 35%;
+  height: 50%;
+  position: fixed;
+  top: 50%; 
+  left: 43%;
+  margin-top: -150px;
+  margin-left: -170px;
+  box-shadow: 0px 10px 70px #FFEC5E;
+  border-radius: 5%;
+}
+.finalMsn1 {
+  width: 35%;
+  height: 50%;
+  position: fixed;
+  left: 32%;
+  font-size:4rem;
+  text-shadow: black 0.1em 0.1em 0.2em ;
+}
+.finalMsn2 {
+  width: 35%;
+  height: 50%;
+  position: fixed;
+  left: 32%;
+  font-size:4rem;
+  text-shadow: black 0.1em 0.1em 0.2em ;
 }
 @keyframes iniciar {
 
