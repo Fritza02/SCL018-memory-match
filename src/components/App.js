@@ -1,7 +1,6 @@
-//
+//hola
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
-//
 //import simpson from '../data/simpson/simpson.js';
 //import random from "../javascrip/random.js";
 //import outCards from 'outCards.js';
