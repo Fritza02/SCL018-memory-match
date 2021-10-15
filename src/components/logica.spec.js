@@ -10,6 +10,7 @@ import perdedor from './perdedor.js'
 
 const data = ['marge','maggie','maggie']
 
+
 /*let firstOption = data.maggie;
 let secondOption = data.maggie;*/
 
@@ -30,11 +31,14 @@ describe('perdedor', () => {
 describe('estados', () => {
     it('debería ser una función', () => {
 
+
     expect(typeof estados).toBe('function');
     })
 
     it('debería hacer match', () => {
 
+
     expect(estados(data)).toEqual(ganador);
     })
 })
+

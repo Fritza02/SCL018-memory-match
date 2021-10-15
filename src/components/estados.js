@@ -2,15 +2,15 @@ import ganador from './ganador.js';
 import perdedor from './perdedor.js';
 
 let estados = (tarjetasComparadas) => {
-
+      
     let firstOption = tarjetasComparadas[0].dataset.imagen;
     let secondOption = tarjetasComparadas[1].dataset.imagen;
 
-    if(firstOption === secondOption) { 
+    if (firstOption===secondOption){
 
         ganador(tarjetasComparadas);
-    } 
-    else  {
+    }
+    else {
 
         perdedor(tarjetasComparadas);
     }
@@ -18,3 +18,4 @@ let estados = (tarjetasComparadas) => {
 }
 
 export default estados;
+

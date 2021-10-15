@@ -2,9 +2,9 @@
 //let matchQuantity = [];
 
 let perdedor = (lasTarjetas) => {
-    console.log('perdedora');
+    console.log("perdedora");
     lasTarjetas.forEach((elemento)=>{
-    elemento.classList.remove('ganadora');
+    elemento.classList.remove("ganadora");
 
     /*if(matchQuantity !== 4) {
         document.getElementById("pageTwo").style.display = "block";
@@ -14,10 +14,10 @@ let perdedor = (lasTarjetas) => {
         }*/
 
     })
-
+    
     setTimeout( () => {
         lasTarjetas.forEach((elemento) => {
-        elemento.classList.remove('descubierta');
+        elemento.classList.remove("descubierta");
         });
     }, 1000);
 
@@ -32,4 +32,5 @@ export default perdedor;
 if(minutosTexto===0 && segundosTexto===0){
 
     console.log("perdisteeee");
+
 }*/

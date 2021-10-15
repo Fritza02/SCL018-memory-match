@@ -15,10 +15,10 @@ const comienzaTiempo = () => {
         minutos = 0;
         console.log('segundos');
         clearInterval(cronometro);
-    
-        /*document.getElementById('pageTwo').style.display = "block";
-        document.getElementById('finalPerdedor').style.display = "block";
-        const audio = document.getElementById("audioPerdedor");
+      
+        /*document.getElementById('pageTwo').style.display = 'block';
+        document.getElementById('finalPerdedor').style.display = 'block';
+        const audio = document.getElementById('audioPerdedor');
         audio.play();*/
     }
     segundosTexto = segundos;

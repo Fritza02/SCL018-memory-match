@@ -12,7 +12,6 @@ const outCards = () => {
     let images = simpson.items;
     let totalImages = images.concat(images);
     let randomImages = shuffle(totalImages);
-  
      //console.log(randomImages);
 
     table = document.getElementById('boardGame');
@@ -40,7 +39,9 @@ const outCards = () => {
   //  return node;
 
   //outCards();
-document.querySelectorAll('.tarjeta').forEach(match);
+
+
+document.querySelectorAll(".tarjeta").forEach(match);
 
 }
 export default outCards;

@@ -183,9 +183,9 @@ div {
   color:#FFEC5E;
 }
 .cronometro {
-  text-align: center;
-  /*background-image: url("imagenes/tvSimpsons1.png");*/
-  }  
+text-align: center;
+/*background-image: url("imagenes/tvSimpsons1.png");*/
+}
 .puerco {
   width: 20%;
   position: relative;
@@ -195,7 +195,7 @@ div {
   background: rgb(168, 10, 155);
   border-radius: 5%;
 }
-.celebracion{
+.celebracion {
   width: 35%;
   height: 50%;
   position: fixed;
