@@ -1,0 +1,149 @@
+/*ipad pro*/
+@media   (max-width: 1024px) and (max-height: 1366px ){
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .firstPage{
+        display: flex;
+        background-image: url('imagenes/fondoo.png') ;
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+    }
+    .title1 {
+        width: 100%;
+        align-items: center;
+    }
+    .instructions {
+        height: 70%;
+    }
+    p {
+        font-size: 2rem ;
+    }
+    .gif{
+        width: 30%;
+        height: 40%;
+        bottom: -40px;
+    }
+    :root {
+        --w: calc(45vw /2);/*ancho */
+        --h: calc(45vh /4);/*alto */
+    }
+    .celebracion{
+        width: 60%;
+        height: 40%;
+        margin-left: -240px;
+    }
+    .puerco {
+        width: 50%;
+        position: absolute;
+        bottom: 75px;
+        margin-left: -260px;
+        background-color: rgb(168, 10, 155);
+        border-radius: 5%;
+    }
+    .tv {
+        margin-top: -130px;
+        width: 200px;
+      } 
+}
+/*iphon x*/
+@media   (max-width: 375px) and (max-height: 812px ) {
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .firstPage{
+        display: flex;
+        background-image: url('imagenes/fondoo.png') ;
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+    }
+    .title1 {
+        width: 100%;
+        align-items: center;
+    }
+    .instructions {
+        height: 80%;
+    }
+    p {
+        font-size:100%;
+    }
+    .gif{
+        width: 50%;
+        height: 35%;
+        bottom: -30px;
+    }
+    .celebracion{
+        width: 70%;
+        top: 50%; 
+        left: 60%;
+        margin-top: -50px;
+        margin-left: -170px;
+    }
+    .finalMsn {
+        font-size: 20px;
+        width: 35%;
+        height: 50%;
+        position: fixed;
+        left: 29%;
+        top: 35%;
+    }
+    .puerco {
+        margin-left: -95px;
+        bottom: 55px;
+    }
+    .tv {
+        margin-top: -100px;
+        width: 120px;
+    } 
+}
+/*galaxy*/
+@media   (max-width: 360px) and (max-height: 640px ){
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .firstPage{
+        display: flex;
+        background-image: url('imagenes/fondoo.png') ;
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        align-items: center;
+    }
+    .title1 {
+        width: 100%;
+        align-items: center;
+    }
+    .instructions {
+        height: 80%;
+    }
+    p {
+        font-size:100%;
+    }
+    .gif{
+        width: 50%;
+        height: 35%;
+        bottom: -30px;
+    }
+    .finalMsn {
+        left: 27%;
+        top: 30%;
+    }
+    .puerco {
+        margin-left: -95px;
+        bottom:45px;
+    }
+    .tv {
+        margin-top: -100px;
+        width: 100px;
+      }
+}
