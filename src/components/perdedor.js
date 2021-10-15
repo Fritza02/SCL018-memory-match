@@ -32,4 +32,5 @@ export default perdedor;
 if(minutosTexto===0 && segundosTexto===0){
 
     console.log("perdisteeee");
+
 }*/

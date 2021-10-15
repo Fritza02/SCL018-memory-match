@@ -10,9 +10,11 @@ const myFunction2 = (element) => {
         if(tarjetasDescubiertas.length > 1) {
         return;
         }
+
     e.currentTarget.classList.add("descubierta");
 
     let numeroDescubiertas = document.querySelectorAll(".descubierta:not(.ganadora)"); //El método querySelectorAll() de un Element devuelve una NodeList estática. Un NodeListobjeto es una lista (colección) de nodos extraídos de un documento.
+
     //console.log(numeroDescubiertas);
 
         if(numeroDescubiertas.length < 2) {
@@ -20,8 +22,10 @@ const myFunction2 = (element) => {
         }
 
     estados(numeroDescubiertas);
+
     });
     cronometro();
     }
 
     export default myFunction2;
+

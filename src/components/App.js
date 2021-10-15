@@ -35,7 +35,7 @@ const App = () => {
     section1.className = 'instructions';
     section1.innerHTML = `<p>instrucciones:</p>
     <p>1.Tienes 5 segundos para memorizar</p>
-    <p>/+la mayor cantidad de personajes</p>
+    <p>la mayor cantidad de personajes</p>
     <p>2.Tienes 60 segundos para completar el juego</p>`
     firstPage.appendChild(section1);
 
@@ -52,7 +52,7 @@ const App = () => {
     section2.className = 'pageTwo';
     section2.id = 'pageTwo';
     firstPage.appendChild(section2);
-    
+  
     //cronometro
     
     const cronometro = document.createElement('nav');
@@ -150,6 +150,80 @@ const App = () => {
     noCelebracion.src = 'gif/ha-ha-nelson.gif';
     finalPerdedor.appendChild(noCelebracion);
 
+    //Tablero
+    
+    const boardGame = document.createElement('div');
+    boardGame.className = 'boardGame';
+    boardGame.id = 'boardGame';
+    section2.appendChild(boardGame);
+
+    //Página Final 
+
+    const finalGame = document.createElement ('div');        
+    finalGame.className = 'finalGame';
+    finalGame.id = 'finalGame';
+    section2.appendChild(finalGame);
+
+    //Pantalla Ganador
+
+    const finalGanador = document.createElement ('div');        
+    finalGanador.className = 'finalGanador';
+    finalGanador.id = 'finalGanador';
+    finalGanador.style.display = 'none'; 
+    finalGame.appendChild(finalGanador);
+    
+    let audioElement1 = document.createElement('audio');
+    audioElement1.className ='audioGanador';
+    audioElement1.id ='audioGanador';
+    audioElement1.setAttribute('src', 'musica/maggieGanadora.mp3'); 
+    audioElement1.setAttribute('autoplay', 'autoplay');
+    finalGanador.appendChild(audioElement1);
+
+    const finalMsn1 = document.createElement ('h1');
+    finalMsn1. className = 'finalMsn1';                         
+    finalMsn1.textContent = '¡Felicitaciones! Has ganado ';
+    finalGanador.appendChild(finalMsn1);
+
+    const celebracion = document.createElement('img');
+    celebracion.className = 'celebracion';                     
+    celebracion.src = 'gif/simpsons-maggie.gif';
+    finalGanador.appendChild(celebracion);
+
+    //Botón Puerco Potter
+
+    const puerco = document.createElement('img');
+    puerco.className = 'puerco';                    
+    puerco.src = 'imagenes/puerco.png';
+    puerco.addEventListener('click',() => {
+    finalGanador.style.display = 'none' ;
+    section1.style.display = 'block' ;
+    });
+    finalGanador.appendChild(puerco);
+
+    //Pantalla Perdedor
+
+    const finalPerdedor = document.createElement ('div');        
+    finalPerdedor.className = 'finalPerdedor';
+    finalPerdedor.id = 'finalPerdedor';
+    finalPerdedor.style.display = 'none'; 
+    finalGame.appendChild(finalPerdedor);
+
+    let audioElement2 = document.createElement('audio');
+    audioElement2.className = 'audioPerdedor';
+    audioElement2.id = 'audioPerdedor';
+    audioElement2.setAttribute('src', 'musica/Nelson burlándose de Bart - Los Simpson Película (Latino).mp3'); 
+    audioElement2.setAttribute('autoplay', 'autoplay');
+    finalPerdedor.appendChild(audioElement2);
+
+    const finalMsn2 = document.createElement ('h1');
+    finalMsn2. className = 'finalMsn2';                        
+    finalMsn2.textContent = '¡Perdiste!';
+    finalPerdedor.appendChild(finalMsn2);
+
+    const noCelebracion = document.createElement('img');
+    noCelebracion.className = 'celebracion';                    
+    noCelebracion.src = 'gif/ha-ha-nelson.gif';
+    finalPerdedor.appendChild(noCelebracion);
     return firstPage;
 };
 

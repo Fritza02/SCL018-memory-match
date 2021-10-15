@@ -1,5 +1,5 @@
 //import App from '/components/App.js';
-import shuffle from "./shuffle.js";
+import shuffle from './shuffle.js';
 import simpson from '../data/simpson/simpson.js';
 import match from './match.js';
 
@@ -24,10 +24,10 @@ const outCards = () => {
 
         card.innerHTML =
 
-    `<div class="area-tarjeta">
-    <div class="tarjeta" data-imagen="${element.imageUrl}"> 
-    <div class="cara-trasera"> <img src = "${element.imageUrl} class="imagesSimpsons"/> </div>
-    <div class="cara-superior">
+    `<div class='area-tarjeta'>
+    <div class='tarjeta' data-imagen='${element.imageUrl}'> 
+    <div class='cara-trasera'> <img src = '${element.imageUrl} class='imagesSimpsons'/> </div>
+    <div class='cara-superior'>
     </div>
     </div>
     </div>`
@@ -39,6 +39,7 @@ const outCards = () => {
   //  return node;
 
   //outCards();
+
 
 document.querySelectorAll(".tarjeta").forEach(match);
 
