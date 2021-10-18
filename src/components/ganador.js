@@ -1,18 +1,20 @@
-import comienzaTiempo from "./cronometro.js";
+import {stopTime} from "./cronometro.js";
 
 let matchQuantity = [];
 let ganador = (lasTarjetas) => {
-    console.log("ganadora");
+    console.log('ganadora');
     lasTarjetas.forEach((elemento)=>{
-        elemento.classList.add("ganadora");
+        elemento.classList.add('ganadora');
         matchQuantity++;
         
-        if(matchQuantity === 4) {
-        clearInterval();
+        if(matchQuantity === 2) {
+            
+        stopTime();
 
-        document.getElementById("pageTwo").style.display = "block";
-        document.getElementById("finalGanador").style.display = "block";
-        var audio = document.getElementById("audioGanador");
+        document.getElementById('pageTwo').style.display = 'block';
+        document.getElementById('finalGanador').style.display = 'block';
+        var audio = document.getElementById('audioGanador');
+
         audio.play();
         }
     })

@@ -1,4 +1,3 @@
-//hola
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
 //import simpson from '../data/simpson/simpson.js';
@@ -14,6 +13,8 @@
 //   .then(console.log)
 //   .catch(console.error);
 //
+import comienzaTiempo from './cronometro.js';
+
 const App = () => {
 
     const firstPage = document.createElement('div');
@@ -44,6 +45,7 @@ const App = () => {
     gif.addEventListener('click',() => {
     section1.style.display = 'none' ;
     section2.style.display = 'block' ;
+    comienzaTiempo(0,10);
     });
     section1.appendChild(gif);
 
@@ -120,7 +122,8 @@ const App = () => {
     puerco.src = 'imagenes/puerco.png';
     puerco.addEventListener('click',() => {
     finalGanador.style.display = 'none' ;
-    section1.style.display = 'block' ;
+    section2.style.display = 'block' ;
+    comienzaTiempo(0,10);
     });
     finalGanador.appendChild(puerco);
 
@@ -173,4 +176,3 @@ el.textContent = '';
 
 return el;
 };*/
-

@@ -1,41 +1,42 @@
-import ganador from "./ganador.js"
-import estados from "./estados.js"
-import perdedor from "./perdedor.js"
+import estados from './estados.js'
 
-/*const data = [
-    { id: 'marge', imageUrl: 'https://i.imgur.com/96NVlic.png', bgColor: '#FFEC5E' },
-    { id: 'maggie', imageUrl: 'https://i.imgur.com/DJBjYIy.png', bgColor: '#FFEC5E' },
-    { id: 'maggie', imageUrl: 'https://i.imgur.com/DJBjYIy.png', bgColor: '#FFEC5E'  },
-];*/
+const data1 = [
+    {dataset:{
+        imagen: 'https://i.imgur.com/96NVlic.png'
+    }},
+    
+    {dataset:{
+        imagen: 'https://i.imgur.com/DJBjYIy.png'
+    }},
+];
 
-const data = ["marge","maggie","maggie"]
+const data2 = [
+    {dataset:{
+        imagen: 'https://i.imgur.com/96NVlic.png'
+    }},
+    
+    {dataset:{
+        imagen: 'https://i.imgur.com/96NVlic.png'
+    }},
+];
 
-/*let firstOption = data.maggie;
-let secondOption = data.maggie;*/
+describe('estados', () => {
+    it('debería ser una función', () => {
 
-describe("ganador", () => {
-    it("debería ser una función", () => {
-
-    expect(typeof ganador).toBe('function');
-    })
-})
-
-describe("perdedor", () => {
-    it("debería ser una función", () => {
-
-    expect(typeof perdedor).toBe('function');
-    })
-})
-
-describe("estados", () => {
-    it("debería ser una función", () => {
 
     expect(typeof estados).toBe('function');
     })
 
-    it("debería hacer match", () => {
+    it('no debería hacer match', () => {
 
-    expect(estados(data)).toEqual(ganador);
+
+    expect(estados(data1)).toEqual(false);
+    })
+
+    it('debería hacer match', () => {
+
+
+    expect(estados(data2)).toEqual(true);
     })
 })
 

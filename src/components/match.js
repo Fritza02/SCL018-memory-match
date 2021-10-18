@@ -1,5 +1,6 @@
 import estados from "./estados.js";
-import cronometro from "./cronometro.js";
+import ganador from "./ganador.js";
+import perdedor from "./perdedor.js";
 
 const myFunction2 = (element) => {    
     element.addEventListener("click", (e) => { //el que escucho el evento
@@ -10,18 +11,29 @@ const myFunction2 = (element) => {
         if(tarjetasDescubiertas.length > 1) {
         return;
         }
+
     e.currentTarget.classList.add("descubierta");
 
-    let numeroDescubiertas = document.querySelectorAll(".descubierta:not(.ganadora)"); //El método querySelectorAll() de un Element devuelve una NodeList estática. Un NodeListobjeto es una lista (colección) de nodos extraídos de un documento.
+    let numeroDescubiertas = document.querySelectorAll(".descubierta:not(.ganadora)"); 
+
     //console.log(numeroDescubiertas);
 
         if(numeroDescubiertas.length < 2) {
         return;
         }
 
-    estados(numeroDescubiertas);
+    if (estados(numeroDescubiertas)) {
+
+        ganador(numeroDescubiertas);
+    }
+
+    else {
+
+        perdedor(numeroDescubiertas);
+    }
+
     });
-    cronometro();
     }
 
     export default myFunction2;
+
