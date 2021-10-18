@@ -14,6 +14,7 @@
 //   .catch(console.error);
 //
 import comienzaTiempo from './cronometro.js';
+import outCards from './outCards.js';
 
 const App = () => {
 
@@ -122,8 +123,9 @@ const App = () => {
     puerco.src = 'imagenes/puerco.png';
     puerco.addEventListener('click',() => {
     finalGanador.style.display = 'none' ;
-    section2.style.display = 'block' ;
+    outCards();
     comienzaTiempo(0,10);
+    audioElement1.pause();
     });
     finalGanador.appendChild(puerco);
 

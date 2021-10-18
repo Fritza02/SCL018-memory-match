@@ -1,8 +1,6 @@
-//import App from '/components/App.js';
 import shuffle from './shuffle.js';
 import simpson from '../data/simpson/simpson.js';
 import match from './match.js';
-//import cronometro from "./cronometro.js";
 
 const outCards = () => {
 

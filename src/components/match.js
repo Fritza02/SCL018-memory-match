@@ -33,7 +33,7 @@ const myFunction2 = (element) => {
     }
 
     });
-  
+    
     }
 
     export default myFunction2;
