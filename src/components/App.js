@@ -36,7 +36,7 @@ const App = () => {
     section1.innerHTML = `<p>instrucciones:</p>
     <p>1.Tienes 5 segundos para memorizar</p>
     <p>/+la mayor cantidad de personajes</p>
-    <p>2.Tienes 60 segundos para completar el juego</p>`
+    <p>2.Tienes 60 segundos para completar el juego</p>`; 
     firstPage.appendChild(section1);
 
     const gif = document.createElement('img');

@@ -2,7 +2,6 @@ let perdedor = (lasTarjetas) => {
     console.log("perdedora");
     lasTarjetas.forEach((elemento)=>{
     elemento.classList.remove("ganadora");
-    
     })
     
     setTimeout( () => {
