@@ -8,8 +8,6 @@ let ganador = (lasTarjetas) => {
         matchQuantity++;
         
         if(matchQuantity === 2) {
-            
-        stopTime();
 
         document.getElementById('pageTwo').style.display = 'block';
         document.getElementById('finalGanador').style.display = 'block';

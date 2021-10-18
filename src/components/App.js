@@ -140,7 +140,7 @@ const App = () => {
     let audioElement2 = document.createElement('audio');
     audioElement2.className = 'audioPerdedor';
     audioElement2.id = 'audioPerdedor';
-    audioElement2.setAttribute('src', 'musica/Nelson burlándose de Bart - Los Simpson Película (Latino).mp3'); 
+    audioElement2.setAttribute('src', 'musica/Nelson burlándose de Bart - Los Simpson Película (Latino)a.mp3'); 
     audioElement2.setAttribute('autoplay', 'autoplay');
     finalPerdedor.appendChild(audioElement2);
 
