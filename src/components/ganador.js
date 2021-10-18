@@ -7,8 +7,9 @@ let ganador = (lasTarjetas) => {
         elemento.classList.add('ganadora');
         matchQuantity++;
         
-        if(matchQuantity === 4) {
-        clearInterval();
+        if(matchQuantity === 2) {
+            
+        stopTime();
 
         stopTime();
 

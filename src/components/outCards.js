@@ -2,8 +2,7 @@
 import shuffle from './shuffle.js';
 import simpson from '../data/simpson/simpson.js';
 import match from './match.js';
-
-
+//import cronometro from "./cronometro.js";
 
 const outCards = () => {
 
@@ -31,10 +30,10 @@ const outCards = () => {
     </div>
     </div>
     </div>`
-    //Los atributos globales data-* forman una clase de atributos , llamados atributos de datos modificables , permite a la información propietaria ser intercambiada entre el HTML y su representación en el DOM que puede ser usada por scripts
-    table.appendChild(card);
-    }
     
+    table.appendChild(card);
+    //cronometro();
+    }
     randomImages.forEach(myFunction);
   //  return node;
 

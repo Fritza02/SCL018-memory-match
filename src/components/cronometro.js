@@ -16,9 +16,7 @@ const comienzaTiempo = (minutos,segundos) => {
             minutos = 0;
             console.log('segundos');
             clearInterval(cronometro);
-    
-            //alert("perdiste");
-    
+          
             document.getElementById('pageTwo').style.display = 'block';
             document.getElementById('finalPerdedor').style.display = 'block';
             const audio = document.getElementById('audioPerdedor');
@@ -45,4 +43,3 @@ const stopTime = () => {
 
 export default comienzaTiempo;
 export {stopTime};
-

@@ -2,14 +2,6 @@ let perdedor = (lasTarjetas) => {
     console.log("perdedora");
     lasTarjetas.forEach((elemento)=>{
     elemento.classList.remove("ganadora");
-
-    if(matchQuantity !== 4) {
-        document.getElementById("pageTwo").style.display = "block";
-        document.getElementById("finalPerdedor").style.display = "block";
-        var audio = document.getElementById("audioPerdedor");
-        audio.play();
-        }
-
     })
     
     setTimeout( () => {

@@ -1,5 +1,5 @@
 let estados = (tarjetasComparadas) => {
-      
+    
     let firstOption = tarjetasComparadas[0].dataset.imagen;
     let secondOption = tarjetasComparadas[1].dataset.imagen;
 
