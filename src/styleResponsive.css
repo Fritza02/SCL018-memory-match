@@ -50,7 +50,7 @@
         width: 200px;
     }
 }
-/*iphon x*/
+/*iphone x*/
 @media   (max-width: 375px) and (max-height: 812px ) {
     body{
         display: flex;
