@@ -1,4 +1,4 @@
-import comienzaTiempo from "./cronometro.js";
+import {stopTime} from "./cronometro.js";
 
 let matchQuantity = [];
 let ganador = (lasTarjetas) => {
@@ -9,6 +9,8 @@ let ganador = (lasTarjetas) => {
         
         if(matchQuantity === 4) {
         clearInterval();
+
+        stopTime();
 
         document.getElementById('pageTwo').style.display = 'block';
         document.getElementById('finalGanador').style.display = 'block';

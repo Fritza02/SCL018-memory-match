@@ -1,6 +1,3 @@
-import ganador from './ganador.js';
-import perdedor from './perdedor.js';
-
 let estados = (tarjetasComparadas) => {
       
     let firstOption = tarjetasComparadas[0].dataset.imagen;
@@ -8,11 +5,11 @@ let estados = (tarjetasComparadas) => {
 
     if (firstOption===secondOption){
 
-        ganador(tarjetasComparadas);
+        return true;
     }
     else {
 
-        perdedor(tarjetasComparadas);
+        return false;
     }
 
 }

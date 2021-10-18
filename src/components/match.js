@@ -1,5 +1,7 @@
 import estados from "./estados.js";
-import cronometro from "./cronometro.js";
+import ganador from "./ganador.js";
+import perdedor from "./perdedor.js";
+
 
 const myFunction2 = (element) => {    
     element.addEventListener("click", (e) => { //el que escucho el evento
@@ -21,10 +23,19 @@ const myFunction2 = (element) => {
         return;
         }
 
-    estados(numeroDescubiertas);
+        if (estados(numeroDescubiertas)) {
+
+            ganador(numeroDescubiertas);
+        }
+    
+        else {
+    
+            perdedor(numeroDescubiertas);
+        }
+    
 
     });
-    cronometro();
+
     }
 
     export default myFunction2;

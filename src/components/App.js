@@ -13,6 +13,8 @@
 //   .then(console.log)
 //   .catch(console.error);
 //
+import comienzaTiempo from './cronometro.js';
+
 const App = () => {
 
     const firstPage = document.createElement('div');
@@ -34,7 +36,7 @@ const App = () => {
     section1.innerHTML = `<p>instrucciones:</p>
     <p>1.Tienes 5 segundos para memorizar</p>
     <p>/+la mayor cantidad de personajes</p>
-    <p>2.Tienes 60 segundos para completar el juego</p>`
+    <p>2.Tienes 60 segundos para completar el juego</p>`; 
     firstPage.appendChild(section1);
   
     const gif = document.createElement('img');
@@ -43,6 +45,7 @@ const App = () => {
     gif.addEventListener('click',() => {
     section1.style.display = 'none' ;
     section2.style.display = 'block' ;
+    comienzaTiempo(0,10);
     });
     section1.appendChild(gif);
   
