@@ -27,7 +27,7 @@ const comienzaTiempo = (minutos,segundos) => {
             segundosTexto = '0' + segundos;
         }
         if (minutos < 10) {
-            minutosTexto = '0' + minutos;
+            minutosTexto =  '0' + minutos + ':';
         }
         document.getElementById('minutos').innerText = minutosTexto;
         document.getElementById('segundos').innerText = segundosTexto;

@@ -45,9 +45,24 @@
         background-color: rgb(168, 10, 155);
         border-radius: 5%;
     }
+    nav{
+        display: flex;
+        justify-content: center;
+      } 
+    .cronometro {
+        margin-top: -100px;
+        font-size: 40px;
+    }
     .tv {
-        margin-top: -130px;
+        margin-top: -95px;
         width: 200px;
+    }
+    .señor{
+        width: 50%;
+        position: absolute;
+        bottom: 75px;
+        margin-left: -260px;
+        border-radius: 5%;
     }
 }
 /*iphone x*/
@@ -99,9 +114,30 @@
         margin-left: -95px;
         bottom: 55px;
     }
-    .tv {
+    .finalMsn2 {
+        font-size: 20px;
+        width: 35%;
+        height: 50%;
+        position: fixed;
+        left: 29%;
+        top: 35%;
+    }
+    .señor {
+        margin-left: -95px;
+        bottom: 55px;
+    }
+    .cronometro {
         margin-top: -100px;
+        font-size: 26px;
+    }
+    .tv {
+        margin-top: -3px;
         width: 120px;
+    }
+    .cara-superior {
+        background-image: url('imagenes/dona-responsive.png');
+        background-size: cover;
+        background-color: #FFEC5E;
     }
 }
 /*galaxy*/
@@ -142,8 +178,25 @@
         margin-left: -95px;
         bottom:45px;
     }
+    .finalMsn2 {
+        left: 27%;
+        top: 30%;
+    }
+    .señor {
+        margin-left: -95px;
+        bottom:45px; 
+    }
+    .cronometro {
+        margin-top: -20px;
+        font-size: 21px;
+    }
     .tv {
-        margin-top: -100px;
+        margin-top: -10px;
         width: 100px;
+    }  
+    .cara-superior {
+        background-image: url('imagenes/dona-responsive.png');
+        background-size: cover;
+        background-color: #FFEC5E;
     }
 }
