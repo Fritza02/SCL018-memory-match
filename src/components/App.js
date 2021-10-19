@@ -18,9 +18,13 @@ import outCards from './outCards.js';
 
 const App = () => {
 
+    //Página principal
+
     const firstPage = document.createElement('div');
     firstPage.className = 'firstPage';
     firstPage.id = 'firstPage'
+
+    //Encabezado
 
     const header = document.createElement('header');
     header.className = 'container-title1';
@@ -32,6 +36,8 @@ const App = () => {
     titulo1.src ='imagenes/titulo1.png';
     header.appendChild(titulo1);
 
+    //Instrucciones del juego
+
     const section1 = document.createElement('section');
     section1.className = 'instructions';
     section1.innerHTML = `<p>instrucciones:</p>
@@ -40,15 +46,28 @@ const App = () => {
     <p>2.Tienes 60 segundos para completar el juego</p>`; 
     firstPage.appendChild(section1);
 
+    //Audio introducción 
+
+    let audioElement = document.createElement('audio');
+    audioElement.className = 'audioIntro';
+    audioElement.id = 'audioIntro';
+    audioElement.setAttribute('src', 'musica/audio-intro.mp3'); 
+    audioElement.setAttribute('controls', 'autoplay');
+    section1.appendChild(audioElement);
+
+    //Botón comenzar
+
     const gif = document.createElement('img');
     gif.className = 'gif';
     gif.src = 'gif/TWJE2.gif';
     gif.addEventListener('click',() => {
     section1.style.display = 'none' ;
     section2.style.display = 'block' ;
-    comienzaTiempo(0,10);
+    comienzaTiempo(0,50);
     });
     section1.appendChild(gif);
+
+    //sección 2
 
     const section2 = document.createElement('section');
     section2.className = 'pageTwo';
@@ -124,7 +143,7 @@ const App = () => {
     puerco.addEventListener('click',() => {
     finalGanador.style.display = 'none' ;
     outCards();
-    comienzaTiempo(0,10);
+    comienzaTiempo(0,50);
     audioElement1.pause();
     });
     finalGanador.appendChild(puerco);
@@ -140,7 +159,7 @@ const App = () => {
     let audioElement2 = document.createElement('audio');
     audioElement2.className = 'audioPerdedor';
     audioElement2.id = 'audioPerdedor';
-    audioElement2.setAttribute('src', 'musica/Nelson burlándose de Bart - Los Simpson Película (Latino)a.mp3'); 
+    audioElement2.setAttribute('src', 'musica/Nelson burlándose de Bart - Los Simpson Película (Latino).mp3'); 
     audioElement2.setAttribute('autoplay', 'autoplay');
     finalPerdedor.appendChild(audioElement2);
 
@@ -153,6 +172,19 @@ const App = () => {
     noCelebracion.className = 'celebracion';                    
     noCelebracion.src = 'gif/ha-ha-nelson.gif';
     finalPerdedor.appendChild(noCelebracion);
+
+    //Botón Señor Burns
+
+    const señor = document.createElement('img');
+    señor.className = 'señor';                    
+    señor.src = 'imagenes/senor-burns.jpg';
+    señor.addEventListener('click',() => {
+    finalPerdedor.style.display = 'none' ;
+    outCards();
+    comienzaTiempo(0,50);
+    audioElement2.pause();
+    });
+    finalPerdedor.appendChild(señor);
 
     return firstPage;
 };
