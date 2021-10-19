@@ -217,13 +217,13 @@ div {
   background: rgb(168, 10, 155);
   border-radius: 5%;
 }
-.señor{
+.burns {
   width: 20%;
   position: relative;
   bottom: -550px;
   border-radius: 10%;
 }
-.señor:hover {
+.burns:hover {
   box-shadow: 0px 10px 70px #FFEC5E;
 }
 .celebracion {

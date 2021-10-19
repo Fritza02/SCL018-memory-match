@@ -1,4 +1,4 @@
-import estados from './estados.js'
+import state from './estados.js'
 
 const data1 = [
     {dataset:{
@@ -24,19 +24,18 @@ describe('estados', () => {
     it('debería ser una función', () => {
 
 
-    expect(typeof estados).toBe('function');
+    expect(typeof state).toBe('function');
     })
 
     it('no debería hacer match', () => {
 
 
-    expect(estados(data1)).toEqual(false);
+    expect(state(data1)).toEqual(false);
     })
 
     it('debería hacer match', () => {
 
 
-    expect(estados(data2)).toEqual(true);
+    expect(state(data2)).toEqual(true);
     })
 })
-

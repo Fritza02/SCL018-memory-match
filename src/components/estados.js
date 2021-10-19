@@ -1,4 +1,4 @@
-let estados = (tarjetasComparadas) => {
+let state = (tarjetasComparadas) => {
     
     let firstOption = tarjetasComparadas[0].dataset.imagen;
     let secondOption = tarjetasComparadas[1].dataset.imagen;
@@ -14,5 +14,5 @@ let estados = (tarjetasComparadas) => {
 
 }
 
-export default estados;
+export default state;
 

@@ -1,4 +1,4 @@
-import comienzaTiempo from './cronometro.js';
+import timeStart from './cronometro.js';
 import outCards from './outCards.js';
 
 const Intro = () => {
@@ -16,10 +16,10 @@ const Intro = () => {
     header.id = 'container-title1';
     firstPage.appendChild(header);
 
-    const titulo1 = document.createElement('img');
-    titulo1.className = 'title1';
-    titulo1.src ='imagenes/titulo1.png';
-    header.appendChild(titulo1);
+    const title1 = document.createElement('img');
+    title1.className = 'title1';
+    title1.src ='imagenes/titulo1.png';
+    header.appendChild(title1);
 
     //Instrucciones del juego
 
@@ -28,7 +28,7 @@ const Intro = () => {
     section1.innerHTML = `<p>instrucciones:</p>
     <p>1.Tienes 5 segundos para memorizar</p>
     <p>/+la mayor cantidad de personajes</p>
-    <p>2.Tienes 60 segundos para completar el juego</p>`; 
+    <p>2.Tienes 50 segundos para completar el juego</p>`; 
     firstPage.appendChild(section1);
 
     //Audio introducción 
@@ -48,7 +48,7 @@ const Intro = () => {
     gif.addEventListener('click',() => {
     section1.style.display = 'none' ;
     section2.style.display = 'block' ;
-    comienzaTiempo(0,50);
+    timeStart(0,50);
     });
     section1.appendChild(gif);
 
@@ -69,25 +69,25 @@ const Intro = () => {
 
     //cronometro
 
-    const cronometro = document.createElement('nav');
-    cronometro.id = 'cronometro';
-    cronometro.className = 'cronometro';
-    section2.appendChild(cronometro);
+    const chronometer = document.createElement('nav');
+    chronometer.id = 'cronometro';
+    chronometer.className = 'cronometro';
+    section2.appendChild(chronometer);
 
     const tv = document.createElement('img');
     tv.className = 'tv';
     tv.src = 'imagenes/tvSimpsons.png';
-    cronometro.appendChild(tv);
+    chronometer.appendChild(tv);
 
-    const minutos = document.createElement('span');
-    minutos.id = 'minutos';
-    minutos.className = 'minutos';
-    cronometro.appendChild(minutos);
+    const minute = document.createElement('span');
+    minute.id = 'minutos';
+    minute.className = 'minutos';
+    chronometer.appendChild(minute);
 
-    const segundos = document.createElement('span');
-    segundos.id = 'segundos';
-    segundos.className = 'segundos';
-    cronometro.appendChild(segundos);
+    const second = document.createElement('span');
+    second.id = 'segundos';
+    second.className = 'segundos';
+    chronometer.appendChild(second);
 
     //Tablero
 
@@ -105,79 +105,79 @@ const Intro = () => {
 
     //Pantalla Ganador
 
-    const finalGanador = document.createElement ('div');        
-    finalGanador.className = 'finalGanador';
-    finalGanador.id = 'finalGanador';
-    finalGanador.style.display = 'none'; 
-    finalGame.appendChild(finalGanador);
+    const winner = document.createElement ('div');        
+    winner.className = 'finalGanador';
+    winner.id = 'finalGanador';
+    winner.style.display = 'none'; 
+    finalGame.appendChild(winner);
 
     let audioElement1 = document.createElement('audio');
     audioElement1.className ='audioGanador';
     audioElement1.id ='audioGanador';
     audioElement1.setAttribute('src', 'musica/maggieGanadora.mp3'); 
     audioElement1.setAttribute('autoplay', 'autoplay');
-    finalGanador.appendChild(audioElement1);
+    winner.appendChild(audioElement1);
 
     const finalMsn1 = document.createElement ('h1');
     finalMsn1. className = 'finalMsn1';                         
     finalMsn1.textContent = '¡Felicitaciones! Has ganado ';
-    finalGanador.appendChild(finalMsn1);
+    winner.appendChild(finalMsn1);
 
-    const celebracion = document.createElement('img');
-    celebracion.className = 'celebracion';                     
-    celebracion.src = 'gif/simpsons-maggie.gif';
-    finalGanador.appendChild(celebracion);
+    const celebration = document.createElement('img');
+    celebration.className = 'celebracion';                     
+    celebration.src = 'gif/simpsons-maggie.gif';
+    winner.appendChild(celebration);
 
     //Botón Puerco Potter
 
-    const puerco = document.createElement('img');
-    puerco.className = 'puerco';                    
-    puerco.src = 'imagenes/puerco.png';
-    puerco.addEventListener('click',() => {
-    finalGanador.style.display = 'none' ;
+    const pig = document.createElement('img');
+    pig.className = 'puerco';                    
+    pig.src = 'imagenes/puerco.png';
+    pig.addEventListener('click',() => {
+    winner.style.display = 'none' ;
     outCards();
-    comienzaTiempo(0,50);
+    timeStart(0,50);
     audioElement1.pause();
     });
-    finalGanador.appendChild(puerco);
+    winner.appendChild(pig);
 
     //Pantalla Perdedor
 
-    const finalPerdedor = document.createElement ('div');        
-    finalPerdedor.className = 'finalPerdedor';
-    finalPerdedor.id = 'finalPerdedor';
-    finalPerdedor.style.display = 'none'; 
-    finalGame.appendChild(finalPerdedor);
+    const loser = document.createElement ('div');        
+    loser.className = 'finalPerdedor';
+    loser.id = 'finalPerdedor';
+    loser.style.display = 'none'; 
+    finalGame.appendChild(loser);
 
     let audioElement2 = document.createElement('audio');
     audioElement2.className = 'audioPerdedor';
     audioElement2.id = 'audioPerdedor';
-    audioElement2.setAttribute('src', 'musica/Nelson burlándose de Bart - Los Simpson Película (Latino).mp3'); 
+    audioElement2.setAttribute('src', 'musica/nelsonBurlandose.mp3'); 
     audioElement2.setAttribute('autoplay', 'autoplay');
-    finalPerdedor.appendChild(audioElement2);
+    loser.appendChild(audioElement2);
 
     const finalMsn2 = document.createElement ('h1');
     finalMsn2. className = 'finalMsn2';                        
     finalMsn2.textContent = '¡Perdiste!';
-    finalPerdedor.appendChild(finalMsn2);
+    loser.appendChild(finalMsn2);
 
-    const noCelebracion = document.createElement('img');
-    noCelebracion.className = 'celebracion';                    
-    noCelebracion.src = 'gif/ha-ha-nelson.gif';
-    finalPerdedor.appendChild(noCelebracion);
+    const noCelebration = document.createElement('img');
+    noCelebration.className = 'celebracion';                    
+    noCelebration.src = 'gif/ha-ha-nelson.gif';
+    loser.appendChild(noCelebration);
 
     //Botón Señor Burns
 
-    const señor = document.createElement('img');
-    señor.className = 'señor';                    
-    señor.src = 'imagenes/senor-burns.jpg';
-    señor.addEventListener('click',() => {
-    finalPerdedor.style.display = 'none' ;
+    const burns = document.createElement('img');
+    burns.className = 'burns';                    
+    burns.src = 'imagenes/senor-burns.jpg';
+    burns.addEventListener('click',() => {
+    loser.style.display = 'none' ;
     outCards();
-    comienzaTiempo(0,50);
+    timeStart(0,50);
     audioElement2.pause();
     });
-    finalPerdedor.appendChild(señor);
+    loser.appendChild(burns);
 
     return firstPage;
 }

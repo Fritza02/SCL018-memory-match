@@ -1,7 +1,7 @@
-import shuffle from "./shuffle.js"
+import shuffle from './shuffle.js'
 
-describe("shuffle", () => {
-    it("debería ser una función", () => {
+describe('shuffle', () => {
+    it('debería ser una función', () => {
 
     expect(typeof shuffle).toEqual('function');
     });

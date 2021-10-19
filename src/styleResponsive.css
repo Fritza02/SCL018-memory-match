@@ -23,18 +23,18 @@
     margin-left: -170px;
     box-shadow: 0px 10px 70px #FFEC5E;
     border-radius: 5%;;
- }
- .señor {
+    }
+    .burns {
     bottom: -580px;
     width: 20%;
     position: relative;
     border-radius: 10%;
- }
- .puerco {
+    }
+    .puerco {
     width: 20%;
     position: relative;
     bottom: -580px;
- }
+    }
 }
 /*ipad pro*/
 @media   (max-width: 1024px) and (max-height: 1366px ){
@@ -95,7 +95,7 @@
         margin-top: -95px;
         width: 200px;
     }
-    .señor{
+    .burns {
         width: 50%;
         position: absolute;
         bottom: 75px;
@@ -164,7 +164,7 @@
         left: 29%;
         top: 35%;
     }
-    .señor {
+    .burns {
         margin-left: -95px;
         bottom: 55px;
     }
@@ -228,7 +228,7 @@
         left: 27%;
         top: 30%;
     }
-    .señor {
+    .burns {
         margin-left: -95px;
         bottom:45px; 
     }

@@ -1,10 +1,10 @@
-import {stopTime} from "./cronometro.js";
+import {stopTime} from './cronometro.js';
 
 let matchQuantity = [];
-let ganador = (lasTarjetas) => {
-    console.log('ganadora');
-    lasTarjetas.forEach((elemento)=>{
-        elemento.classList.add('ganadora');
+let winner = (cards) => {
+
+    cards.forEach((element)=>{
+        element.classList.add('ganadora');
         
         matchQuantity++;
         
@@ -21,4 +21,4 @@ let ganador = (lasTarjetas) => {
 
 }
 
-export default ganador; 
+export default winner; 
