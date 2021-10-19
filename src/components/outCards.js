@@ -38,7 +38,7 @@ const outCards = () => {
   //outCards();
 
 
-document.querySelectorAll(".tarjeta").forEach(match);
+document.querySelectorAll('.tarjeta').forEach(match);
 
 }
 export default outCards;

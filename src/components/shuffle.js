@@ -4,7 +4,6 @@ const shuffle = (data) => {
     [data[i], data[j]] = [data[j], data[i]];
     /*i=28  j=19*/ 
     }
-    console.log(data);
     return data;
 };
 export default shuffle ;
