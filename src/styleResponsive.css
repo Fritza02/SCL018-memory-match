@@ -34,6 +34,7 @@
     width: 20%;
     position: relative;
     bottom: -580px;
+
     }
 }
 /*ipad pro*/
@@ -86,7 +87,7 @@
     nav{
         display: flex;
         justify-content: center;
-      } 
+    } 
     .cronometro {
         margin-top: -100px;
         font-size: 40px;
