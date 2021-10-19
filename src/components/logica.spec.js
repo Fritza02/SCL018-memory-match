@@ -39,4 +39,3 @@ describe('estados', () => {
     expect(state(data2)).toEqual(true);
     })
 })
-

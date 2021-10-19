@@ -25,15 +25,16 @@
     border-radius: 5%;;
     }
     .burns {
-        bottom: -580px;
-        width: 20%;
-        position: relative;
-        border-radius: 10%;
+    bottom: -580px;
+    width: 20%;
+    position: relative;
+    border-radius: 10%;
     }
     .puerco {
-        width: 20%;
-        position: relative;
-        bottom: -580px;
+    width: 20%;
+    position: relative;
+    bottom: -580px;
+
     }
 }
 /*ipad pro*/
@@ -95,7 +96,7 @@
         margin-top: -95px;
         width: 200px;
     }
-    .burns{
+    .burns {
         width: 50%;
         position: absolute;
         bottom: 75px;

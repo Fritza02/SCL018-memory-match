@@ -5,4 +5,5 @@ describe('App', () => {
     const el = App();
     expect(el instanceof HTMLElement).toBe(true);
   });
-})
+});
+
