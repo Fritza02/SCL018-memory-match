@@ -14,30 +14,22 @@
 
 *** Cambio1
 
-## 1. Preámbulo
+## 1. Descripción Juego Memorice The Simpsons
 
-El juego [_Memory Match_](https://en.wikipedia.org/wiki/Concentration_(card_game)),
-también conocido como _Concentration_, _Match Match_, _Match Up_, _Memory_,
-entre otros, es un juego de cartas en el que todas las cartas se ponen cara
-abajo sobre una superficie y se le dan la vuelta a dos cartas en cada turno. El
-objetivo del juego es destapar parejas de cartas que coincidan.
+"Memorice The Simpsons" es un juego de memoria inspirado en la serie animada de comedia estadounidense "Los Simpson" ("The Simpsons", en inglés). Está dirigido a todo público, pero principalmente conocedores de la temática (fanáticos), ya que las cartas muestran a los personajes principales del núcleo familiar de Los Simpson. Posee un único nivel de dificultad, el cual consta de un total de 16 cartas y un tiempo límite de 50 segundos para girarlas todas en pares iguales y así ganar la partida, de lo contrario se pierde.
 
-![Concentration (card game)](https://upload.wikimedia.org/wikipedia/commons/4/4d/WMCZ_Protected_Areas_Card_Game-7_%28cropped%29.jpg)
+## 2. Instrucciones de uso.
 
-Ejemplos:
+Para jugar Memorice The Simpsons:
 
-* [Santa Tracker de Google](https://santatracker.google.com/matching.html)
-* [Match The Memory](https://matchthememory.com/play)
+  1. En la primera página aparecerán las instrucciones del juego, luego el botón comenzar y finalmente, en la parte inferior de la página, una barra de controlador para que manualmente se reproduzca la canción introductoria de Los Simpson mientras se juega.
 
-## 2. Resumen del proyecto
+  2. Una vez que se aprete el botón comenzar de la página 1, se pasa a una página 2 con el despliegue de las 16 cartas, estas se voltearan todas juntas durante 5 segundos para que el jugador intente memorizar tantos pares de cartas iguales como pueda, terminado estos 5 segundos se vuelven a girar y el jugar debe comenzar a girarlas en pares, las cartas iguales quedarán visibles, mientras que las distintas se volverán a girar sin mostrar al personaje en las cartas. En la parte superior de la página aparecerá una televisión que mostrará el tiempo que le queda al jugador para terminar la partida.
 
-En este proyecto construirás una versión _web_ del juego _Memory Match_, en la
-que una jugadora pueda jugar sola, en el navegador.
+  3. Una vez finalizado el juego, aparecerá una tercera pantalla que indicará si el jugador ganó o perdió y en ambos casos un botón para "nuevo juego" o "inténtelo otra vez", dependiendo el caso. 
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web basada en data e interacción con la usuaria.
 
-## 3. Objetivos de aprendizaje
+## 3. Interfaz
 
 Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
 
