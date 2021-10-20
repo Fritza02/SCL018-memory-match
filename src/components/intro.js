@@ -21,14 +21,15 @@ const Intro = () => {
     title1.src ='imagenes/titulo1.png';
     header.appendChild(title1);
 
-    //Instrucciones del juego
+    //Instruccioness del juego
 
     const section1 = document.createElement('section');
     section1.className = 'instructions';
     section1.innerHTML = `<p>instrucciones:</p>
     <p>1.Tienes 5 segundos para memorizar</p>
-    <p>/+la mayor cantidad de personajes</p>
-    <p>2.Tienes 50 segundos para completar el juego</p>`; 
+    <p>la mayor cantidad de personajes</p>
+    <p>2.Tienes 50 segundos para completar el juego</p>
+    <p>3.En la parte inferior derecha podras poner musica </p>`; 
     firstPage.appendChild(section1);
 
     //Audio introducción 

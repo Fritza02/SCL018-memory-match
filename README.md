@@ -1,5 +1,3 @@
-# Memory Match Game
-
 ## Índice
 
 * [1. Descripción juego Memorice The Simpsons](#1-Descripción-juego-Memorice-The-Simpsons)
@@ -91,4 +89,3 @@ Criterios de aceptación: En la página de inicio se podrá encontrar una peque�
 * https://www.loom.com/share/c290f64f84eb44d88f326e093c43f0dd
 
 ## 7. Enlace página
-
