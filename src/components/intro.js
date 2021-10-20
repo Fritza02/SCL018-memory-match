@@ -21,7 +21,7 @@ const Intro = () => {
     title1.src ='imagenes/titulo1.png';
     header.appendChild(title1);
 
-    //Instrucciones del juego
+    //Instruccioness del juego
 
     const section1 = document.createElement('section');
     section1.className = 'instructions';
