@@ -169,7 +169,7 @@ div {
   transform: rotateY(-180deg);
 }
 .tarjeta.ganadora {
-  pointer-events: none;
+  pointer-events: none;/*reaccion al puntero */
 }
 .finalGanador {
   display: flex;
