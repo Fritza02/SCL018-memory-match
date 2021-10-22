@@ -81,6 +81,15 @@ Si no logras encontrar todos los pares de los personajes en menos de 50 segundos
 
 Criterios de aceptación: En la página de inicio se podrá encontrar una pequeña explicación de como jugar , una barra donde podrás poner la música de los Simpson  si quieres , y un botón para comenzar el juego.
 
+* Definición de terminado : 
+
+El diseño de la página y su contenido ha pasado por feedback  hecho por usuarios .
+El proyecto cumple con lo requerido por nuestros usuarios .
+El código pasa los Test Unitarios que se necesita para la interacción del usuario .
+El proyecto ha pasado por test de usabilidad  , se ha adecuado la página para que sea lo más simple y acorde a nuestros usuarios .
+El código cumple con los requisitos de interacción para poder jugar 
+La página se puede visualizar y se puede ejecutar  para celular,ipad  y notebook (responsive)
+
 
 ## 6. Test de usabilidad
 
@@ -89,3 +98,5 @@ Criterios de aceptación: En la página de inicio se podrá encontrar una peque�
 * https://www.loom.com/share/c290f64f84eb44d88f326e093c43f0dd
 
 ## 7. Enlace página
+
+* https://fritza02.github.io/SCL018-memory-match/src/

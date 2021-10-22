@@ -14,7 +14,7 @@ const timeStart = (minutos,segundos) => {
             segundos = 0;
             minutos = 0;
             clearInterval(chronometer);
-            document.getElementById('pageTwo').style.display = 'block';
+            
             document.getElementById('finalPerdedor').style.display = 'block';
             const audio = document.getElementById('audioPerdedor');
             audio.play();
