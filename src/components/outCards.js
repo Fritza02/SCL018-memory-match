@@ -28,13 +28,8 @@ const outCards = () => {
     </div>`
     
     table.appendChild(card);
-    //cronometro();
     }
     randomImages.forEach(myFunction);
-  //  return node;
-
-  //outCards();
-
 
 document.querySelectorAll('.tarjeta').forEach(match);
 

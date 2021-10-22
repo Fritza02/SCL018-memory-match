@@ -15,19 +15,19 @@ const myFunction2 = (element) => {
 
     let discoveredNumbers = document.querySelectorAll('.descubierta:not(.ganadora)'); //numero descubiertas
 
-        if(discoveredNumbers.length < 2) {
+        if(discoveredNumbers.length < 2) { //aquí solo se giran 2
         return;
         }
 
-    if (state(discoveredNumbers)) {
+        if (state(discoveredNumbers)) { //true
 
         winner(discoveredNumbers);
-    }
+        }
 
-    else {
+        else { //false
 
         loser(discoveredNumbers);
-    }
+        }
 
     });
     
