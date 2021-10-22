@@ -5,11 +5,9 @@ import match from './match.js';
 const outCards = () => {
 
     let table = document.createElement('div');
-    //return node;
     let images = simpson.items;
     let totalImages = images.concat(images);
     let randomImages = shuffle(totalImages);
-     //console.log(randomImages);
 
     table = document.getElementById('boardGame');
     

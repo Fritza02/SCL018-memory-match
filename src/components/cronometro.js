@@ -14,14 +14,14 @@ const timeStart = (minutos,segundos) => {
             segundos = 0;
             minutos = 0;
             clearInterval(chronometer);
-            document.getElementById('pageTwo').style.display = 'block';
+            
             document.getElementById('finalPerdedor').style.display = 'block';
             const audio = document.getElementById('audioPerdedor');
             audio.play();
         }
         secondsText = segundos;
         minutesText = minutos;
-        if (segundos < 10) {
+        if (segundos < 10) {// para existan 4 digitos 
             secondsText = '0' + segundos;
         }
         if (minutos < 10) {
@@ -29,7 +29,7 @@ const timeStart = (minutos,segundos) => {
         }
         document.getElementById('minutos').innerText = minutesText;
         document.getElementById('segundos').innerText = secondsText;
-        }
+    }
     chronometer = setInterval(updateTime, 1000);
 }
 const stopTime = () => {

@@ -17,9 +17,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 .firstPage { /*contenedor*/
   display: flex;
@@ -172,7 +169,7 @@ div {
   transform: rotateY(-180deg);
 }
 .tarjeta.ganadora {
-  pointer-events: none;
+  pointer-events: none;/*reaccion al puntero */
 }
 .finalGanador {
   display: flex;

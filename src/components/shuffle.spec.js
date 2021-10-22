@@ -8,12 +8,12 @@ describe('shuffle', () => {
 
     it('debería retornar 4 para "[1,2,3,4]"' , () => {
     let array = [1,2,3,4];
-    expect(shuffle(array)).toHaveLength(4); //toHaveLenght: Es especialmente útil para verificar el tamaño de cadenas o arreglos.
+    expect(shuffle(array)).toHaveLength(4); 
     });
 
     it('debería retornar true para "[1,2,3,4]"' , () => {
     let array = [1,2,3,4];
-    expect(shuffle(array)).toContain(3); //toContain: comprueba si el elemento está en la lista del arreglo
+    expect(shuffle(array)).toContain(3); 
 
     });
     it('deberia randomizar un arreglo', () => {
