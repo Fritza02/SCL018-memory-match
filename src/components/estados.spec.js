@@ -30,12 +30,12 @@ describe('estados', () => {
     it('no debería hacer match', () => {
 
 
-    expect(state(data1)).toEqual(false);
+    expect(state(data1)).toBe(false);
     })
 
     it('debería hacer match', () => {
 
 
-    expect(state(data2)).toEqual(true);
+    expect(state(data2)).toBe(true);
     })
 })

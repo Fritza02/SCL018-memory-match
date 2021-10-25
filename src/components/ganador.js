@@ -10,7 +10,6 @@ let winner = (cards) => {
         
         if(matchQuantity === 16) {
 
-        document.getElementById('pageTwo').style.display = 'block';
         document.getElementById('finalGanador').style.display = 'block';
         var audio = document.getElementById('audioGanador');
         audio.play();
