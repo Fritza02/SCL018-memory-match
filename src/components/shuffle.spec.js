@@ -10,7 +10,6 @@ describe('shuffle', () => {
     let array = [1,2,3,4];
 
     expect(shuffle(array)).toHaveLength(4);
-      
     });
 
     it('debería retornar true para "[1,2,3,4]"' , () => { 
