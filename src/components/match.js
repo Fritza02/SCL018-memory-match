@@ -6,16 +6,16 @@ const myFunction2 = (element) => {
     element.addEventListener('click', (e) => { //el que escucho el evento
 
     const uncoveredCards = document.querySelectorAll('.descubierta:not(.ganadora)'); //tarjetas descubiertas
-
+    console.log(uncoveredCards);
         if(uncoveredCards.length > 1) {
         return;
         }
 
     e.currentTarget.classList.add('descubierta');
 
-    let discoveredNumbers = document.querySelectorAll('.descubierta:not(.ganadora)'); //numero descubiertas
+    const discoveredNumbers = document.querySelectorAll('.descubierta:not(.ganadora)'); //numero descubiertas
 
-        if(discoveredNumbers.length < 2) { //aquí solo se giran 2
+        if(discoveredNumbers.length < 2) { //reconoce que son hasta 2 tarjetas
         return;
         }
 
